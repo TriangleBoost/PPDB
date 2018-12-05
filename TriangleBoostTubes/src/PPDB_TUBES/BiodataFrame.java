@@ -118,6 +118,7 @@ public class BiodataFrame extends javax.swing.JFrame {
         jLabel6.setText("/");
 
         TahunComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1999" }));
+        TahunComboBox.setSelectedIndex(-1);
 
         jLabel3.setText("jLabel3");
 
