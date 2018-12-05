@@ -49,6 +49,9 @@ public class OrtuFrame extends javax.swing.JFrame {
         jLabelAlamatIbu = new javax.swing.JLabel();
         jTFAlamatIbu = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
+        jButtonBack = new javax.swing.JButton();
+        jButtonReset = new javax.swing.JButton();
+        jButtonNext = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -181,6 +184,12 @@ public class OrtuFrame extends javax.swing.JFrame {
                 .addGap(22, 22, 22))
         );
 
+        jButtonBack.setText("Back");
+
+        jButtonReset.setText("Reset");
+
+        jButtonNext.setText("Next");
+
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
@@ -194,15 +203,29 @@ public class OrtuFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(jButtonBack)
+                        .addGap(48, 48, 48)
+                        .addComponent(jButtonReset)
+                        .addGap(54, 54, 54)
+                        .addComponent(jButtonNext)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 19, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonBack)
+                    .addComponent(jButtonReset)
+                    .addComponent(jButtonNext))
+                .addGap(0, 47, Short.MAX_VALUE))
         );
 
         pack();
@@ -247,6 +270,9 @@ public class OrtuFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonBack;
+    private javax.swing.JButton jButtonNext;
+    private javax.swing.JButton jButtonReset;
     private javax.swing.JLabel jLabelAlamatAyah;
     private javax.swing.JLabel jLabelAlamatIbu;
     private javax.swing.JLabel jLabelGajiAyah;
