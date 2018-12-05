@@ -64,6 +64,8 @@ public class BiodataFrame extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
+        jButtonReset = new javax.swing.JButton();
+        jButtonNext = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         keluarMenu = new javax.swing.JMenuItem();
@@ -140,6 +142,10 @@ public class BiodataFrame extends javax.swing.JFrame {
 
         jTextField5.setText("jTextField5");
 
+        jButtonReset.setText("Reset");
+
+        jButtonNext.setText("Next");
+
         jMenu1.setText("File");
 
         keluarMenu.setText("Keluar");
@@ -207,6 +213,12 @@ public class BiodataFrame extends javax.swing.JFrame {
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonReset)
+                .addGap(102, 102, 102)
+                .addComponent(jButtonNext)
+                .addGap(107, 107, 107))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,7 +264,11 @@ public class BiodataFrame extends javax.swing.JFrame {
                         .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel11)
                         .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(116, 116, 116)
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonReset)
+                    .addComponent(jButtonNext))
+                .addGap(39, 39, 39)
                 .addComponent(lihatWaktu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -341,6 +357,8 @@ public class BiodataFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> TahunComboBox;
     private javax.swing.JTextField Tempatfield;
     private javax.swing.ButtonGroup genderGroup;
+    private javax.swing.JButton jButtonNext;
+    private javax.swing.JButton jButtonReset;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
