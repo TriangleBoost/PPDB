@@ -243,9 +243,10 @@
             <StringItem index="9" value="Oktober"/>
             <StringItem index="10" value="November"/>
             <StringItem index="11" value="Desember"/>
-            <StringItem index="12" value=" "/>
+            <StringItem index="12" value=""/>
           </StringArray>
         </Property>
+        <Property name="selectedIndex" type="int" value="-1"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
