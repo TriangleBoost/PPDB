@@ -12,6 +12,7 @@ import java.util.Calendar;
 import java.util.Date;
 import javax.swing.ButtonModel;
 import javax.swing.JOptionPane;
+import javax.swing.JFrame ;
 
 /**
  *
@@ -54,8 +55,8 @@ public class BiodataFrame extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
         TahunComboBox = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabelAgama = new javax.swing.JLabel();
+        AgamaComboBox = new javax.swing.JComboBox<>();
         jTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -122,9 +123,10 @@ public class BiodataFrame extends javax.swing.JFrame {
         TahunComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1999" }));
         TahunComboBox.setSelectedIndex(-1);
 
-        jLabel3.setText("jLabel3");
+        jLabelAgama.setText("Agama");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        AgamaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Islam", "Kristen", "Hindu", "Budha" }));
+        AgamaComboBox.setSelectedIndex(-1);
 
         jTextField2.setText("jTextField2");
 
@@ -174,7 +176,7 @@ public class BiodataFrame extends javax.swing.JFrame {
                     .addComponent(jLabelNISN, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelNama, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
-                    .addComponent(jLabel3)
+                    .addComponent(jLabelAgama)
                     .addComponent(jLabel4)
                     .addComponent(jLabel9)
                     .addComponent(jLabel10))
@@ -211,7 +213,7 @@ public class BiodataFrame extends javax.swing.JFrame {
                             .addComponent(jLabel11)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AgamaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -247,8 +249,8 @@ public class BiodataFrame extends javax.swing.JFrame {
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelAgama)
+                    .addComponent(AgamaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -351,6 +353,7 @@ public class BiodataFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> AgamaComboBox;
     private javax.swing.JComboBox<String> BulanComboBox;
     private javax.swing.JTextField NISNtext;
     private javax.swing.JTextField Namatext;
@@ -359,16 +362,15 @@ public class BiodataFrame extends javax.swing.JFrame {
     private javax.swing.ButtonGroup genderGroup;
     private javax.swing.JButton jButtonNext;
     private javax.swing.JButton jButtonReset;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelAgama;
     private javax.swing.JLabel jLabelNISN;
     private javax.swing.JLabel jLabelNama;
     private javax.swing.JMenu jMenu1;
