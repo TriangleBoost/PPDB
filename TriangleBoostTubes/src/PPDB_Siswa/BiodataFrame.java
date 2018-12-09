@@ -130,17 +130,17 @@ public class BiodataFrame extends javax.swing.JFrame {
 
         jTextField2.setText("jTextField2");
 
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("No. Telp");
 
-        jLabel9.setText("jLabel9");
+        jLabel9.setText("Alamat");
 
         jTextField3.setText("jTextField3");
 
-        jLabel10.setText("jLabel10");
+        jLabel10.setText("Anak ke-");
 
         jTextField4.setText("jTextField4");
 
-        jLabel11.setText("jLabel11");
+        jLabel11.setText("Dari - ");
 
         jTextField5.setText("jTextField5");
 
