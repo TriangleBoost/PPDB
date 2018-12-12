@@ -114,9 +114,9 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jButtonReset" min="-2" max="-2" attributes="0"/>
+              <Component id="btnReset" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-              <Component id="jButtonNext" min="-2" max="-2" attributes="0"/>
+              <Component id="btnNext" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -176,8 +176,8 @@
               </Group>
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButtonReset" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonNext" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnReset" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnNext" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Component id="lihatWaktu" min="-2" pref="25" max="-2" attributes="0"/>
@@ -392,20 +392,20 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="KetextActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonReset">
+    <Component class="javax.swing.JButton" name="btnReset">
       <Properties>
         <Property name="text" type="java.lang.String" value="Reset"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonResetActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnResetActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonNext">
+    <Component class="javax.swing.JButton" name="btnNext">
       <Properties>
         <Property name="text" type="java.lang.String" value="Next"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonNextActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNextActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -65,8 +65,8 @@ public class BiodataFrame extends javax.swing.JFrame {
         Anaktext = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         Ketext = new javax.swing.JTextField();
-        jButtonReset = new javax.swing.JButton();
-        jButtonNext = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         keluarMenu = new javax.swing.JMenuItem();
@@ -148,17 +148,17 @@ public class BiodataFrame extends javax.swing.JFrame {
             }
         });
 
-        jButtonReset.setText("Reset");
-        jButtonReset.addActionListener(new java.awt.event.ActionListener() {
+        btnReset.setText("Reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonResetActionPerformed(evt);
+                btnResetActionPerformed(evt);
             }
         });
 
-        jButtonNext.setText("Next");
-        jButtonNext.addActionListener(new java.awt.event.ActionListener() {
+        btnNext.setText("Next");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonNextActionPerformed(evt);
+                btnNextActionPerformed(evt);
             }
         });
 
@@ -234,9 +234,9 @@ public class BiodataFrame extends javax.swing.JFrame {
                         .addGap(168, 168, 168))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonReset)
+                .addComponent(btnReset)
                 .addGap(102, 102, 102)
-                .addComponent(jButtonNext)
+                .addComponent(btnNext)
                 .addGap(107, 107, 107))
         );
         layout.setVerticalGroup(
@@ -285,8 +285,8 @@ public class BiodataFrame extends javax.swing.JFrame {
                         .addComponent(jLabel11)))
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonReset)
-                    .addComponent(jButtonNext))
+                    .addComponent(btnReset)
+                    .addComponent(btnNext))
                 .addGap(39, 39, 39)
                 .addComponent(lihatWaktu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -326,7 +326,7 @@ public class BiodataFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_KetextActionPerformed
 
-    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         NISNtext.setText("") ;
         Namatext.setText("") ;
         Tempatfield.setText("") ;
@@ -342,17 +342,17 @@ public class BiodataFrame extends javax.swing.JFrame {
         
         
         
-    }//GEN-LAST:event_jButtonResetActionPerformed
+    }//GEN-LAST:event_btnResetActionPerformed
 
     private void AnaktextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnaktextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AnaktextActionPerformed
 
-    private void jButtonNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNextActionPerformed
-                OrtuFrame OF = new OrtuFrame();
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+                NilaiFrame OF = new NilaiFrame();
                 OF.setVisible(true);
                 this.dispose();
-    }//GEN-LAST:event_jButtonNextActionPerformed
+    }//GEN-LAST:event_btnNextActionPerformed
     private void getDate(){
         int tahun = 2017;
         DateFormat df = new SimpleDateFormat(tahun+"/ yyyy");
@@ -413,9 +413,9 @@ public class BiodataFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> TahunComboBox;
     private javax.swing.JTextField Telptext;
     private javax.swing.JTextField Tempatfield;
+    private javax.swing.JButton btnNext;
+    private javax.swing.JButton btnReset;
     private javax.swing.ButtonGroup genderGroup;
-    private javax.swing.JButton jButtonNext;
-    private javax.swing.JButton jButtonReset;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

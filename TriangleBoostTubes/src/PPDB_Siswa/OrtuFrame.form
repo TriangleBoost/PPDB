@@ -48,11 +48,11 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                      <Component id="jButtonBack" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Component id="jButtonReset" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnReset" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                      <Component id="jButtonNext" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnNext" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -65,9 +65,9 @@
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButtonBack" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonReset" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonNext" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBack" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnReset" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnNext" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
           </Group>
@@ -99,23 +99,23 @@
                           <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jTFAlamatAyah" min="-2" pref="180" max="-2" attributes="0"/>
+                                  <Component id="AlamatAyah" min="-2" pref="180" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jTFTlpnAyah" max="32767" attributes="0"/>
+                              <Component id="TlpAyah" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTFGajiAyah" max="32767" attributes="0"/>
-                              <Component id="jTFPekerjaanAyah" max="32767" attributes="0"/>
+                              <Component id="GajiAyah" max="32767" attributes="0"/>
+                              <Component id="PekerjaanAyah" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="jLabelNamaAyah" min="-2" pref="82" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                          <Component id="jTFNamaAyah" max="32767" attributes="0"/>
+                          <Component id="NamaAyah" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -127,8 +127,8 @@
                                   </Group>
                                   <EmptySpace pref="83" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTFTlpnIbu" alignment="1" min="-2" pref="180" max="-2" attributes="0"/>
-                                      <Component id="jTFAlamatIbu" alignment="1" min="-2" pref="180" max="-2" attributes="0"/>
+                                      <Component id="TlpIbu" alignment="1" min="-2" pref="180" max="-2" attributes="0"/>
+                                      <Component id="AlamatIbu" alignment="1" min="-2" pref="180" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -139,9 +139,9 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTFNamaIbu" pref="180" max="32767" attributes="0"/>
-                                      <Component id="jTFPekerjaanIbu" max="32767" attributes="0"/>
-                                      <Component id="jTextField8" max="32767" attributes="0"/>
+                                      <Component id="NamaIbu" pref="180" max="32767" attributes="0"/>
+                                      <Component id="PekerjaanIbu" max="32767" attributes="0"/>
+                                      <Component id="GajiIbu" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -162,26 +162,26 @@
                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelNamaAyah" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTFNamaAyah" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NamaAyah" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabelPekerjaanAyah" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTFPekerjaanAyah" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PekerjaanAyah" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelGajiAyah" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTFGajiAyah" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="GajiAyah" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTFTlpnAyah" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TlpAyah" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelTlpnAyah" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTFAlamatAyah" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
+                      <Component id="AlamatAyah" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
                       <Component id="jLabelAlamatAyah" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="39" max="32767" attributes="0"/>
@@ -189,26 +189,26 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelNamaIbu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTFNamaIbu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NamaIbu" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelPekerjaanIbu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTFPekerjaanIbu" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="PekerjaanIbu" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelGajiIbu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="GajiIbu" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTFTlpnIbu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TlpIbu" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelTlpnIbu" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTFAlamatIbu" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
+                      <Component id="AlamatIbu" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
                       <Component id="jLabelAlamatIbu" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -237,55 +237,55 @@
             <Property name="text" type="java.lang.String" value="No Telepon"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTFNamaAyah">
+        <Component class="javax.swing.JTextField" name="NamaAyah">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelAlamatAyah">
           <Properties>
             <Property name="text" type="java.lang.String" value="Alamat"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTFPekerjaanAyah">
+        <Component class="javax.swing.JTextField" name="PekerjaanAyah">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTFGajiAyah">
+        <Component class="javax.swing.JTextField" name="GajiAyah">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTFTlpnAyah">
+        <Component class="javax.swing.JTextField" name="TlpAyah">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTFAlamatAyah">
+        <Component class="javax.swing.JTextField" name="AlamatAyah">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelNamaIbu">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nama Ibu"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTFNamaIbu">
+        <Component class="javax.swing.JTextField" name="NamaIbu">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelPekerjaanIbu">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pekerjaan"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTFPekerjaanIbu">
+        <Component class="javax.swing.JTextField" name="PekerjaanIbu">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelGajiIbu">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gaji"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField8">
+        <Component class="javax.swing.JTextField" name="GajiIbu">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelTlpnIbu">
           <Properties>
             <Property name="text" type="java.lang.String" value="No Telepon"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTFTlpnIbu">
+        <Component class="javax.swing.JTextField" name="TlpIbu">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelAlamatIbu">
           <Properties>
             <Property name="text" type="java.lang.String" value="Alamat"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTFAlamatIbu">
+        <Component class="javax.swing.JTextField" name="AlamatIbu">
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator1">
           <Properties>
@@ -296,17 +296,20 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="jButtonBack">
+    <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
         <Property name="text" type="java.lang.String" value="Back"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonReset">
+    <Component class="javax.swing.JButton" name="btnReset">
       <Properties>
         <Property name="text" type="java.lang.String" value="Reset"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonNext">
+    <Component class="javax.swing.JButton" name="btnNext">
       <Properties>
         <Property name="text" type="java.lang.String" value="Next"/>
       </Properties>

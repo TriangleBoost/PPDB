@@ -32,26 +32,26 @@ public class OrtuFrame extends javax.swing.JFrame {
         jLabelPekerjaanAyah = new javax.swing.JLabel();
         jLabelGajiAyah = new javax.swing.JLabel();
         jLabelTlpnAyah = new javax.swing.JLabel();
-        jTFNamaAyah = new javax.swing.JTextField();
+        NamaAyah = new javax.swing.JTextField();
         jLabelAlamatAyah = new javax.swing.JLabel();
-        jTFPekerjaanAyah = new javax.swing.JTextField();
-        jTFGajiAyah = new javax.swing.JTextField();
-        jTFTlpnAyah = new javax.swing.JTextField();
-        jTFAlamatAyah = new javax.swing.JTextField();
+        PekerjaanAyah = new javax.swing.JTextField();
+        GajiAyah = new javax.swing.JTextField();
+        TlpAyah = new javax.swing.JTextField();
+        AlamatAyah = new javax.swing.JTextField();
         jLabelNamaIbu = new javax.swing.JLabel();
-        jTFNamaIbu = new javax.swing.JTextField();
+        NamaIbu = new javax.swing.JTextField();
         jLabelPekerjaanIbu = new javax.swing.JLabel();
-        jTFPekerjaanIbu = new javax.swing.JTextField();
+        PekerjaanIbu = new javax.swing.JTextField();
         jLabelGajiIbu = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        GajiIbu = new javax.swing.JTextField();
         jLabelTlpnIbu = new javax.swing.JLabel();
-        jTFTlpnIbu = new javax.swing.JTextField();
+        TlpIbu = new javax.swing.JTextField();
         jLabelAlamatIbu = new javax.swing.JLabel();
-        jTFAlamatIbu = new javax.swing.JTextField();
+        AlamatIbu = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        jButtonBack = new javax.swing.JButton();
-        jButtonReset = new javax.swing.JButton();
-        jButtonNext = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -97,18 +97,18 @@ public class OrtuFrame extends javax.swing.JFrame {
                         .addGap(72, 72, 72)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jTFAlamatAyah, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(AlamatAyah, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jTFTlpnAyah)))
+                            .addComponent(TlpAyah)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(137, 137, 137)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTFGajiAyah)
-                            .addComponent(jTFPekerjaanAyah)))
+                            .addComponent(GajiAyah)
+                            .addComponent(PekerjaanAyah)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabelNamaAyah, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(55, 55, 55)
-                        .addComponent(jTFNamaAyah))
+                        .addComponent(NamaAyah))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabelPekerjaanAyah)
@@ -118,8 +118,8 @@ public class OrtuFrame extends javax.swing.JFrame {
                                     .addComponent(jLabelAlamatIbu))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTFTlpnIbu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTFAlamatIbu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(TlpIbu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(AlamatIbu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabelNamaIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -127,9 +127,9 @@ public class OrtuFrame extends javax.swing.JFrame {
                                     .addComponent(jLabelGajiIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(4, 4, 4)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTFNamaIbu, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                                    .addComponent(jTFPekerjaanIbu)
-                                    .addComponent(jTextField8))))
+                                    .addComponent(NamaIbu, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                                    .addComponent(PekerjaanIbu)
+                                    .addComponent(GajiIbu))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(250, 250, 250))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -142,53 +142,58 @@ public class OrtuFrame extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelNamaAyah)
-                    .addComponent(jTFNamaAyah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NamaAyah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelPekerjaanAyah)
-                    .addComponent(jTFPekerjaanAyah, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(PekerjaanAyah, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelGajiAyah)
-                    .addComponent(jTFGajiAyah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(GajiAyah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFTlpnAyah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TlpAyah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelTlpnAyah))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFAlamatAyah, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AlamatAyah, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelAlamatAyah))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelNamaIbu)
-                    .addComponent(jTFNamaIbu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NamaIbu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelPekerjaanIbu)
-                    .addComponent(jTFPekerjaanIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(PekerjaanIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelGajiIbu)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(GajiIbu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFTlpnIbu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TlpIbu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelTlpnIbu))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFAlamatIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AlamatIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelAlamatIbu))
                 .addGap(22, 22, 22))
         );
 
-        jButtonBack.setText("Back");
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
-        jButtonReset.setText("Reset");
+        btnReset.setText("Reset");
 
-        jButtonNext.setText("Next");
+        btnNext.setText("Next");
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -209,11 +214,11 @@ public class OrtuFrame extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(85, 85, 85)
-                        .addComponent(jButtonBack)
+                        .addComponent(btnBack)
                         .addGap(48, 48, 48)
-                        .addComponent(jButtonReset)
+                        .addComponent(btnReset)
                         .addGap(54, 54, 54)
-                        .addComponent(jButtonNext)))
+                        .addComponent(btnNext)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -222,14 +227,20 @@ public class OrtuFrame extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonBack)
-                    .addComponent(jButtonReset)
-                    .addComponent(jButtonNext))
+                    .addComponent(btnBack)
+                    .addComponent(btnReset)
+                    .addComponent(btnNext))
                 .addGap(0, 47, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+         NilaiFrame OF = new NilaiFrame();
+                OF.setVisible(true);
+                this.dispose();
+    }//GEN-LAST:event_btnBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -270,9 +281,19 @@ public class OrtuFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonBack;
-    private javax.swing.JButton jButtonNext;
-    private javax.swing.JButton jButtonReset;
+    private javax.swing.JTextField AlamatAyah;
+    private javax.swing.JTextField AlamatIbu;
+    private javax.swing.JTextField GajiAyah;
+    private javax.swing.JTextField GajiIbu;
+    private javax.swing.JTextField NamaAyah;
+    private javax.swing.JTextField NamaIbu;
+    private javax.swing.JTextField PekerjaanAyah;
+    private javax.swing.JTextField PekerjaanIbu;
+    private javax.swing.JTextField TlpAyah;
+    private javax.swing.JTextField TlpIbu;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnNext;
+    private javax.swing.JButton btnReset;
     private javax.swing.JLabel jLabelAlamatAyah;
     private javax.swing.JLabel jLabelAlamatIbu;
     private javax.swing.JLabel jLabelGajiAyah;
@@ -288,15 +309,5 @@ public class OrtuFrame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTFAlamatAyah;
-    private javax.swing.JTextField jTFAlamatIbu;
-    private javax.swing.JTextField jTFGajiAyah;
-    private javax.swing.JTextField jTFNamaAyah;
-    private javax.swing.JTextField jTFNamaIbu;
-    private javax.swing.JTextField jTFPekerjaanAyah;
-    private javax.swing.JTextField jTFPekerjaanIbu;
-    private javax.swing.JTextField jTFTlpnAyah;
-    private javax.swing.JTextField jTFTlpnIbu;
-    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }

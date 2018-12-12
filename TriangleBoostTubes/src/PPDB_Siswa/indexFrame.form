@@ -69,8 +69,8 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton1" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="jButton2" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="btnPeraturan" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="btnDaftar" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -100,9 +100,9 @@
                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" pref="51" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="47" max="-2" attributes="0"/>
+                          <Component id="btnPeraturan" min="-2" pref="47" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="btnDaftar" min="-2" pref="48" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -113,7 +113,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel1">
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnPeraturan">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="14" style="1"/>
@@ -121,10 +121,10 @@
             <Property name="text" type="java.lang.String" value="PERATURAN PPDB"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPeraturanActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btnDaftar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="14" style="1"/>
@@ -132,7 +132,7 @@
             <Property name="text" type="java.lang.String" value="DAFTAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDaftarActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
