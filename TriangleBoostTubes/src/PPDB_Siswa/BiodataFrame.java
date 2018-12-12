@@ -57,14 +57,14 @@ public class BiodataFrame extends javax.swing.JFrame {
         TahunComboBox = new javax.swing.JComboBox<>();
         jLabelAgama = new javax.swing.JLabel();
         AgamaComboBox = new javax.swing.JComboBox<>();
-        jTextField2 = new javax.swing.JTextField();
+        Telptext = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        Alamattext = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        Anaktext = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        Ketext = new javax.swing.JTextField();
         jButtonReset = new javax.swing.JButton();
         jButtonNext = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -134,17 +134,33 @@ public class BiodataFrame extends javax.swing.JFrame {
 
         jLabel10.setText("Anak ke-");
 
+        Anaktext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnaktextActionPerformed(evt);
+            }
+        });
+
         jLabel11.setText("Dari - ");
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        Ketext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                KetextActionPerformed(evt);
             }
         });
 
         jButtonReset.setText("Reset");
+        jButtonReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonResetActionPerformed(evt);
+            }
+        });
 
         jButtonNext.setText("Next");
+        jButtonNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNextActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("File");
 
@@ -205,16 +221,16 @@ public class BiodataFrame extends javax.swing.JFrame {
                                 .addComponent(Namatext)
                                 .addComponent(NISNtext))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addComponent(Telptext, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                                .addComponent(Alamattext, javax.swing.GroupLayout.Alignment.LEADING))
                             .addComponent(AgamaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(20, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField4)
+                        .addComponent(Anaktext)
                         .addGap(11, 11, 11)
                         .addComponent(jLabel11)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Ketext, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(168, 168, 168))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -254,18 +270,18 @@ public class BiodataFrame extends javax.swing.JFrame {
                     .addComponent(AgamaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Telptext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Alamattext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Ketext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Anaktext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel11)))
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -306,9 +322,37 @@ public class BiodataFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void KetextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KetextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_KetextActionPerformed
+
+    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
+        NISNtext.setText("") ;
+        Namatext.setText("") ;
+        Tempatfield.setText("") ;
+        tanggalComboBox.setSelectedItem(null) ;
+        BulanComboBox.setSelectedItem(null) ;
+        TahunComboBox.setSelectedItem(null) ;
+        AgamaComboBox.setSelectedItem(null) ;
+        Telptext.setText("") ;
+        Alamattext.setText("") ;
+        Anaktext.setText("") ;
+        Ketext.setText("") ;
+        genderGroup.clearSelection() ;
+        
+        
+        
+    }//GEN-LAST:event_jButtonResetActionPerformed
+
+    private void AnaktextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnaktextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnaktextActionPerformed
+
+    private void jButtonNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNextActionPerformed
+                OrtuFrame OF = new OrtuFrame();
+                OF.setVisible(true);
+                this.dispose();
+    }//GEN-LAST:event_jButtonNextActionPerformed
     private void getDate(){
         int tahun = 2017;
         DateFormat df = new SimpleDateFormat(tahun+"/ yyyy");
@@ -360,10 +404,14 @@ public class BiodataFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> AgamaComboBox;
+    private javax.swing.JTextField Alamattext;
+    private javax.swing.JTextField Anaktext;
     private javax.swing.JComboBox<String> BulanComboBox;
+    private javax.swing.JTextField Ketext;
     private javax.swing.JTextField NISNtext;
     private javax.swing.JTextField Namatext;
     private javax.swing.JComboBox<String> TahunComboBox;
+    private javax.swing.JTextField Telptext;
     private javax.swing.JTextField Tempatfield;
     private javax.swing.ButtonGroup genderGroup;
     private javax.swing.JButton jButtonNext;
@@ -384,10 +432,6 @@ public class BiodataFrame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JMenuItem keluarMenu;
     private javax.swing.JLabel lihatWaktu;
     private javax.swing.JComboBox<String> tanggalComboBox;
