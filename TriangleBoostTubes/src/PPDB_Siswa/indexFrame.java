@@ -39,8 +39,6 @@ public class indexFrame extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PEMERINTAH KABUPATEN CIGARET\n", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial", 1, 14))); // NOI18N
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\klk.png")); // NOI18N
-
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton1.setText("PERATURAN PPDB");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -51,6 +49,11 @@ public class indexFrame extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton2.setText("DAFTAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel3.setText("SELAMAT DATANG DI SMA NEGERI 48 CIAPA");
@@ -126,8 +129,17 @@ public class indexFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+                PeraturanFrame PF = new PeraturanFrame();
+                PF.setVisible(true);
+                this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+                BiodataFrame BF = new BiodataFrame();
+                BF.setVisible(true);
+                this.dispose();
+            
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
