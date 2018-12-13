@@ -195,11 +195,11 @@ public class NilaiFrame extends javax.swing.JFrame {
        
                 
              StringBuilder sb = new StringBuilder();
-             sb.append("Nilai Matematika: ").append(NilaiMTK.getText()).append("\n");
-             sb.append("Nilai Bahasa Indonesia: ").append(NilaiBindo.getText()).append("\n");
-             sb.append("Nilai Bahasa Inggris: ").append(NilaiBING.getText()).append("\n");
-             sb.append("Nilai Ilmu Pengetahuan Alam: ").append(NilaiIPA.getText()).append("\n");
-             sb.append("Nilai Rata Rata: ").append(RataRata.getText()).append("\n");
+             sb.append("Nilai Matematika \t\t: ").append(NilaiMTK.getText()).append("\n");
+             sb.append("Nilai Bahasa Indonesia \t\t: ").append(NilaiBindo.getText()).append("\n");
+             sb.append("Nilai Bahasa Inggris \t\t: ").append(NilaiBING.getText()).append("\n");
+             sb.append("Nilai Ilmu Pengetahuan Alam \t: ").append(NilaiIPA.getText()).append("\n");
+             sb.append("Nilai Rata Rata \t\t: ").append(RataRata.getText()).append("\n");
                 JOptionPane.showMessageDialog(this, sb, "Nilai Siswa", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnSubmitActionPerformed
 
