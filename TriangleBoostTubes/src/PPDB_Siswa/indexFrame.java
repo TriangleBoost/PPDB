@@ -5,6 +5,10 @@
  */
 package PPDB_Siswa;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *
  * @author HP
@@ -33,11 +37,14 @@ public class indexFrame extends javax.swing.JFrame {
         btnDaftar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        waktuAjaran = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SMAN 48 Ciapa");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PEMERINTAH KABUPATEN CIGARET\n", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial", 1, 14))); // NOI18N
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PPDB_IMAGES/klk.png"))); // NOI18N
 
         btnPeraturan.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnPeraturan.setText("PERATURAN PPDB");
@@ -63,6 +70,16 @@ public class indexFrame extends javax.swing.JFrame {
         jLabel2.setText("TOTAL PAGU 300 SISWA/I");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        waktuAjaran.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                waktuAjaranAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -86,6 +103,10 @@ public class indexFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(21, 21, 21))))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(waktuAjaran, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,7 +117,8 @@ public class indexFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(24, 24, 24))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(waktuAjaran, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -104,7 +126,7 @@ public class indexFrame extends javax.swing.JFrame {
                         .addComponent(btnPeraturan, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addComponent(btnDaftar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -141,6 +163,17 @@ public class indexFrame extends javax.swing.JFrame {
             
     }//GEN-LAST:event_btnDaftarActionPerformed
 
+    private void waktuAjaranAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_waktuAjaranAncestorAdded
+        getDate();
+    }//GEN-LAST:event_waktuAjaranAncestorAdded
+    private void getDate(){
+//        int tahun = 2017;
+        DateFormat df = new SimpleDateFormat("/ yyyy");
+        Date date = new Date();
+        waktuAjaran.setText("Tahun Ajaran "+df.format(date));
+        
+        
+    }
     /**
      * @param args the command line arguments
      */
@@ -183,5 +216,6 @@ public class indexFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel waktuAjaran;
     // End of variables declaration//GEN-END:variables
 }
