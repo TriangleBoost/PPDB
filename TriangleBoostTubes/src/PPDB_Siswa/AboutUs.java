@@ -35,8 +35,10 @@ public class AboutUs extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("Assalamu'alaikum Wr. Wb.\n\n- Perkembangan dan perubahan tersebut menuntut perubahan dan peningkatan di bidang pendidikan\n  (termasuk SMA Negeri 48 CIAPA) dalam menyiapkan peserta didik untuk mewujudkan Sumber Daya Manusia yang berbudi pekerti luhur,\n  berbudaya,berwawasan lingkungan, unggul dalam prestasi serta kompetitif dalam\n  dunia global.\n\nSekolah yang berada di :\na. Jalan\t\t: Menuju Kebaikan no.666\nb. Desa/Kelurahan\t: Ingin Maju\nc. Kecamatan\t\t: Sinar Mas\nd. Kabupaten/Kota\t: Cigaret\ne. Provinsi\t\t: Tengah Tengah\nf. Kode Pos\t\t: 08097\ng. Status Sekolah\t: Sekolah Negeri\n\nYang didirikan pada tahun 1999 ini");
+        jTextArea1.setText("Assalamu'alaikum Wr. Wb.\n\n- Perkembangan dan perubahan tersebut menuntut perubahan dan peningkatan di bidang pendidikan\n  (termasuk SMA Negeri 48 CIAPA) dalam menyiapkan peserta didik untuk mewujudkan Sumber Daya Manusia yang berbudi pekerti luhur,\n  berbudaya,berwawasan lingkungan, unggul dalam prestasi serta kompetitif dalam\n  dunia global.\n\nSekolah yang berada di :\na. Jalan\t\t: Menuju Kebaikan no.666\nb. Desa/Kelurahan\t: Ingin Maju\nc. Kecamatan\t\t: Sinar Mas\nd. Kabupaten/Kota\t: Cigaret\ne. Provinsi\t\t: Tengah Tengah\nf. Kode Pos\t\t: 08097\ng. Status Sekolah\t: Sekolah Negeri\n\nYang didirikan pada tahun 1999 ini siap meloloskan siswa siswa nya pada SNMPTN/SBMPTN dengan fasilitas fasilitas dan tenaga pengajar yang memumpuni");
+        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane1.setViewportView(jTextArea1);
 
         btnBack.setText("Back");
@@ -52,16 +54,20 @@ public class AboutUs extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 797, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 56, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 797, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(723, 723, 723)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBack)
                 .addGap(28, 28, 28))
         );

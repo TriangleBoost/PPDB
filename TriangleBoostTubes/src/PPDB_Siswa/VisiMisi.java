@@ -34,8 +34,10 @@ public class VisiMisi extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText("Visi Sekolah :\n\"Mewujudkan insan Indonesia yang berbudi pekerti luhur, berbudaya, berwawasan lingkungan,\n unggul dalam prestasi, serta kompetitif dalam dunia global\"\n\nMisi Sekolah :\n1. Meningkatkan mutu pendidikan yang mengintegrasikan system nilai agama dan budaya dengan ilmu pengetahuan dan teknologi.\n2. Mengembangkan komponen seluruh sekolah secara optimal baik dalam bidang akademis maupun non akademis dan berwawasan \n   lingkungan sehingga mampu bersaing secara global.\n3. Menanamkan kedisiplinan melalui budaya bersih, budaya tertib, dan budaya kerja.\n4. Mengedepankan pendidikan karakter dengan meningkatkan budi pekerti serta meningkatkan jiwa nasionalisme yang \n   kuat dan bermartabat.");
+        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("back");

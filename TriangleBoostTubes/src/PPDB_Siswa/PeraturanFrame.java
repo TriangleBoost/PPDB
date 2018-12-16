@@ -44,7 +44,7 @@ public class PeraturanFrame extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText("1. Syarat usia dan STTB\n   Persyaratan calon siswa untuk dapat masuk kelas 10 SMA sederajat memiliki usia \n   maksimal 18 tahun. Syarat usia di buktikan dengan akta kelahiran yang di legalisir\n   Syarat lain untuk mengikuti PPDB adalah Surrat Tnada Tamat Belajar(STTB) SMP \n   atau bentuk lain sederajat.\n\n2. Urutan prioritas penerimaan\n   Seleksi calon siswa baru mempertimbangkan urutan sesuai dengan daya tampung \n   berdasarkan ketentuan sebagai berikut : \n\ta.  Nilai rata rata hasil ujian SMP/sederajat\n\tb.  apabila mempunyai nilai yang sama dengan calon siswa lain maka\n\t    di perhitungkan dari waktu pendaftaran yang lebih dahulu");
-        jTextArea1.setBorder(null);
+        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane1.setViewportView(jTextArea1);
 
         btnBack.setText("Back");
