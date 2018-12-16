@@ -92,10 +92,6 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                          <Component id="lihatWaktu" min="-2" pref="108" max="-2" attributes="0"/>
-                      </Group>
                       <Component id="Namatext" alignment="0" max="32767" attributes="0"/>
                       <Component id="NISNtext" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
@@ -178,9 +174,7 @@
                   <Component id="btnNext" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnBack" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="lihatWaktu" min="-2" pref="25" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="77" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -275,11 +269,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="/"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lihatWaktu">
-      <Events>
-        <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="lihatWaktuAncestorAdded"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelNISN">
       <Properties>

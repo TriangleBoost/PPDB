@@ -23,7 +23,7 @@
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -102,7 +102,7 @@
                                   <Component id="AlamatAyah" min="-2" pref="180" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="TlpAyah" max="32767" attributes="0"/>
+                              <Component id="TeleponAyah" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -118,17 +118,17 @@
                           <Component id="NamaAyah" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabelPekerjaanAyah" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabelTlpnIbu" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelAlamatIbu" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="83" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="TlpIbu" alignment="1" min="-2" pref="180" max="-2" attributes="0"/>
-                                      <Component id="AlamatIbu" alignment="1" min="-2" pref="180" max="-2" attributes="0"/>
+                                      <Component id="TeleponIbu" min="-2" pref="180" max="-2" attributes="0"/>
+                                      <Component id="AlamatIbu" min="-2" pref="180" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -176,7 +176,7 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="TlpAyah" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TeleponAyah" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelTlpnAyah" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -203,7 +203,7 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="TlpIbu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TeleponIbu" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelTlpnIbu" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -248,7 +248,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="GajiAyah">
         </Component>
-        <Component class="javax.swing.JTextField" name="TlpAyah">
+        <Component class="javax.swing.JTextField" name="TeleponAyah">
         </Component>
         <Component class="javax.swing.JTextField" name="AlamatAyah">
         </Component>
@@ -278,7 +278,7 @@
             <Property name="text" type="java.lang.String" value="No Telepon"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="TlpIbu">
+        <Component class="javax.swing.JTextField" name="TeleponIbu">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelAlamatIbu">
           <Properties>
@@ -308,11 +308,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Reset"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnResetActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnNext">
       <Properties>
         <Property name="text" type="java.lang.String" value="Next"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNextActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

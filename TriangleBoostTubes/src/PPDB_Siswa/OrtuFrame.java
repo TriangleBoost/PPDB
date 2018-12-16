@@ -36,7 +36,7 @@ public class OrtuFrame extends javax.swing.JFrame {
         jLabelAlamatAyah = new javax.swing.JLabel();
         PekerjaanAyah = new javax.swing.JTextField();
         GajiAyah = new javax.swing.JTextField();
-        TlpAyah = new javax.swing.JTextField();
+        TeleponAyah = new javax.swing.JTextField();
         AlamatAyah = new javax.swing.JTextField();
         jLabelNamaIbu = new javax.swing.JLabel();
         NamaIbu = new javax.swing.JTextField();
@@ -45,7 +45,7 @@ public class OrtuFrame extends javax.swing.JFrame {
         jLabelGajiIbu = new javax.swing.JLabel();
         GajiIbu = new javax.swing.JTextField();
         jLabelTlpnIbu = new javax.swing.JLabel();
-        TlpIbu = new javax.swing.JTextField();
+        TeleponIbu = new javax.swing.JTextField();
         jLabelAlamatIbu = new javax.swing.JLabel();
         AlamatIbu = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
@@ -99,7 +99,7 @@ public class OrtuFrame extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(AlamatAyah, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(TlpAyah)))
+                            .addComponent(TeleponAyah)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(137, 137, 137)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,16 +110,16 @@ public class OrtuFrame extends javax.swing.JFrame {
                         .addGap(55, 55, 55)
                         .addComponent(NamaAyah))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelPekerjaanAyah)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabelTlpnIbu)
                                     .addComponent(jLabelAlamatIbu))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                                .addGap(72, 72, 72)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TlpIbu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(AlamatIbu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(TeleponIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(AlamatIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabelNamaIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,7 +153,7 @@ public class OrtuFrame extends javax.swing.JFrame {
                     .addComponent(GajiAyah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TlpAyah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TeleponAyah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelTlpnAyah))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -175,7 +175,7 @@ public class OrtuFrame extends javax.swing.JFrame {
                     .addComponent(GajiIbu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TlpIbu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TeleponIbu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelTlpnIbu))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -192,8 +192,18 @@ public class OrtuFrame extends javax.swing.JFrame {
         });
 
         btnReset.setText("Reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
 
         btnNext.setText("Next");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -234,13 +244,34 @@ public class OrtuFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-         NilaiFrame OF = new NilaiFrame();
-                OF.setVisible(true);
+         BiodataFrame BF = new BiodataFrame();
+                BF.setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        NamaAyah.setText("");
+        NamaIbu.setText("");
+        PekerjaanAyah.setText("");
+        PekerjaanIbu.setText("");
+        GajiAyah.setText("");
+        GajiIbu.setText("");
+        TeleponAyah.setText("");
+        TeleponIbu.setText("");
+        AlamatAyah.setText("");
+        AlamatIbu.setText("");
+        
+    }//GEN-LAST:event_btnResetActionPerformed
+
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        NilaiFrame NF = new NilaiFrame();
+        NF.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnNextActionPerformed
 
     /**
      * @param args the command line arguments
@@ -289,8 +320,8 @@ public class OrtuFrame extends javax.swing.JFrame {
     private javax.swing.JTextField NamaIbu;
     private javax.swing.JTextField PekerjaanAyah;
     private javax.swing.JTextField PekerjaanIbu;
-    private javax.swing.JTextField TlpAyah;
-    private javax.swing.JTextField TlpIbu;
+    private javax.swing.JTextField TeleponAyah;
+    private javax.swing.JTextField TeleponIbu;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnNext;
     private javax.swing.JButton btnReset;

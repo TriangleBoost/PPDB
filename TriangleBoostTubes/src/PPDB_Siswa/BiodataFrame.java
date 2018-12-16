@@ -47,7 +47,6 @@ public class BiodataFrame extends javax.swing.JFrame {
         tanggalComboBox = new javax.swing.JComboBox<>();
         BulanComboBox = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
-        lihatWaktu = new javax.swing.JLabel();
         jLabelNISN = new javax.swing.JLabel();
         NISNtext = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -87,16 +86,6 @@ public class BiodataFrame extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setText("/");
-
-        lihatWaktu.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                lihatWaktuAncestorAdded(evt);
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
 
         jLabelNISN.setText("NISN");
 
@@ -230,9 +219,6 @@ public class BiodataFrame extends javax.swing.JFrame {
                             .addComponent(jRadioButton1)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(jRadioButton2))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(95, 95, 95)
-                            .addComponent(lihatWaktu, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(Namatext)
                         .addComponent(NISNtext)
                         .addGroup(layout.createSequentialGroup()
@@ -300,9 +286,7 @@ public class BiodataFrame extends javax.swing.JFrame {
                     .addComponent(btnReset)
                     .addComponent(btnNext)
                     .addComponent(btnBack))
-                .addGap(39, 39, 39)
-                .addComponent(lihatWaktu, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         pack();
@@ -321,11 +305,6 @@ public class BiodataFrame extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_keluarMenuActionPerformed
-
-    private void lihatWaktuAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_lihatWaktuAncestorAdded
-        getDate();
-        
-    }//GEN-LAST:event_lihatWaktuAncestorAdded
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
@@ -362,7 +341,7 @@ public class BiodataFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_AnaktextActionPerformed
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
-                NilaiFrame OF = new NilaiFrame();
+                OrtuFrame OF = new OrtuFrame();
                 OF.setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_btnNextActionPerformed
@@ -376,13 +355,7 @@ public class BiodataFrame extends javax.swing.JFrame {
     private void TahunComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TahunComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TahunComboBoxActionPerformed
-    private void getDate(){
-        int tahun = 2017;
-        DateFormat df = new SimpleDateFormat(tahun+"/ yyyy");
-        Date date = new Date();
-        lihatWaktu.setText(df.format(date));
-        
-    }
+    
     /**
      * @param args the command line arguments
      */
@@ -457,7 +430,6 @@ public class BiodataFrame extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JMenuItem keluarMenu;
-    private javax.swing.JLabel lihatWaktu;
     private javax.swing.JComboBox<String> tanggalComboBox;
     // End of variables declaration//GEN-END:variables
 }
