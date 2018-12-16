@@ -27,6 +27,7 @@ public class AboutUs extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSpinner1 = new javax.swing.JSpinner();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         btnBack = new javax.swing.JButton();
@@ -35,7 +36,7 @@ public class AboutUs extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Assalamu'alaikum Wr. Wb.\n\n- Perkembangan dan perubahan dunia pendidikan di Indonesia tidak terlepas dari pengaruh perubahan global,\n  perkembangan ilmu pengetahuan dan teknologi, serta seni dan budaya.\n\n- Perkembangan dan perubahan tersebut menuntut perubahan dan peningkatan di bidang pendidikan\n  (termasuk SMA Negeri 48 CIAPA) dalam menyiapkan peserta didik untuk mewujudkan Sumber Daya Manusia yang berbudi pekerti luhur,\n  berbudaya,berwawasan lingkungan, unggul dalam prestasi serta kompetitif dalam\n  dunia global.\n\nSekolah yang berada di :\na. Jalan\t\t: Menuju Kebaikan no.666\nb. Desa/Kelurahan\t: Ingin Maju\nc. Kecamatan\t\t: Sinar Mas\nd. Kabupaten/Kota\t: Cigaret\ne. Provinsi\t\t: Tengah Tengah\nf. Kode Pos\t\t: 08097\ng. Status Sekolah\t: Sekolah Negeri\n\nYang didirikan pada tahun 1999 ini");
+        jTextArea1.setText("Assalamu'alaikum Wr. Wb.\n\n- Perkembangan dan perubahan tersebut menuntut perubahan dan peningkatan di bidang pendidikan\n  (termasuk SMA Negeri 48 CIAPA) dalam menyiapkan peserta didik untuk mewujudkan Sumber Daya Manusia yang berbudi pekerti luhur,\n  berbudaya,berwawasan lingkungan, unggul dalam prestasi serta kompetitif dalam\n  dunia global.\n\nSekolah yang berada di :\na. Jalan\t\t: Menuju Kebaikan no.666\nb. Desa/Kelurahan\t: Ingin Maju\nc. Kecamatan\t\t: Sinar Mas\nd. Kabupaten/Kota\t: Cigaret\ne. Provinsi\t\t: Tengah Tengah\nf. Kode Pos\t\t: 08097\ng. Status Sekolah\t: Sekolah Negeri\n\nYang didirikan pada tahun 1999 ini");
         jScrollPane1.setViewportView(jTextArea1);
 
         btnBack.setText("Back");
@@ -50,20 +51,19 @@ public class AboutUs extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 748, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 797, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 56, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnBack)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
         );
 
         pack();
@@ -113,6 +113,7 @@ public class AboutUs extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

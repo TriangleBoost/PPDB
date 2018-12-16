@@ -175,7 +175,9 @@ public class indexFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPeraturanActionPerformed
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
-                
+        AboutUs OF = new AboutUs();
+                OF.setVisible(true);
+                this.dispose();                
             
     }//GEN-LAST:event_btnAboutActionPerformed
 
@@ -184,7 +186,9 @@ public class indexFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_waktuAjaranAncestorAdded
 
     private void btnVisiMisiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisiMisiActionPerformed
-        // TODO add your handling code here:
+      VisiMisi OF = new VisiMisi();
+                OF.setVisible(true);
+                this.dispose();
     }//GEN-LAST:event_btnVisiMisiActionPerformed
 
     private void btnDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDaftarActionPerformed
