@@ -7,8 +7,11 @@ package PPDB_Siswa;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import static java.time.temporal.ChronoUnit.YEARS;
+import java.util.Calendar;
 import java.util.Date;
+import javafx.util.converter.LocalDateTimeStringConverter;
 
 /**
  *
@@ -37,8 +40,8 @@ public class indexFrame extends javax.swing.JFrame {
         btnAbout = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         waktuAjaran = new javax.swing.JLabel();
-        btnDaftar1 = new javax.swing.JButton();
-        btnDaftar2 = new javax.swing.JButton();
+        btnVisiMisi = new javax.swing.JButton();
+        btnDaftar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SMAN 48 Ciapa");
@@ -75,19 +78,19 @@ public class indexFrame extends javax.swing.JFrame {
             }
         });
 
-        btnDaftar1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnDaftar1.setText("VISI MISI");
-        btnDaftar1.addActionListener(new java.awt.event.ActionListener() {
+        btnVisiMisi.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnVisiMisi.setText("VISI MISI");
+        btnVisiMisi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDaftar1ActionPerformed(evt);
+                btnVisiMisiActionPerformed(evt);
             }
         });
 
-        btnDaftar2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnDaftar2.setText("DAFTAR");
-        btnDaftar2.addActionListener(new java.awt.event.ActionListener() {
+        btnDaftar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnDaftar.setText("DAFTAR");
+        btnDaftar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDaftar2ActionPerformed(evt);
+                btnDaftarActionPerformed(evt);
             }
         });
 
@@ -100,19 +103,19 @@ public class indexFrame extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(215, 215, 215)
-                .addComponent(waktuAjaran, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAbout, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPeraturan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVisiMisi, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnDaftar1, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
-                    .addComponent(btnDaftar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnDaftar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPeraturan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(215, 215, 215)
+                .addComponent(waktuAjaran, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,11 +125,11 @@ public class indexFrame extends javax.swing.JFrame {
                 .addGap(234, 234, 234)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDaftar1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnPeraturan, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPeraturan, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDaftar2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnDaftar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVisiMisi, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(waktuAjaran, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -159,9 +162,7 @@ public class indexFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPeraturanActionPerformed
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
-                BiodataFrame BF = new BiodataFrame();
-                BF.setVisible(true);
-                this.dispose();
+                
             
     }//GEN-LAST:event_btnAboutActionPerformed
 
@@ -169,21 +170,22 @@ public class indexFrame extends javax.swing.JFrame {
         getDate();
     }//GEN-LAST:event_waktuAjaranAncestorAdded
 
-    private void btnDaftar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDaftar1ActionPerformed
+    private void btnVisiMisiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisiMisiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnDaftar1ActionPerformed
+    }//GEN-LAST:event_btnVisiMisiActionPerformed
 
-    private void btnDaftar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDaftar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDaftar2ActionPerformed
-    private void getDate(){
-//        int tahun = 2017;
-        
-        DateFormat df = new SimpleDateFormat("/ yyyy");
-        Date date = new Date();
-        waktuAjaran.setText("Tahun Ajaran "+df.format(date));
-        
-        
+    private void btnDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDaftarActionPerformed
+        BiodataFrame BF = new BiodataFrame();
+                BF.setVisible(true);
+                this.dispose();
+    }//GEN-LAST:event_btnDaftarActionPerformed
+    // MENGAMBIL TAHUN SEKARANG DAN TAHUN SELANJUTNYA
+    private void getDate(){        
+        Calendar now = Calendar.getInstance();
+        Calendar past = Calendar.getInstance();
+        past.add(Calendar.YEAR, 1);
+        System.out.println("date before 100 years : "+past.get(Calendar.YEAR));
+        waktuAjaran.setText("Tahun Ajaran  "+ now.get(Calendar.YEAR)+ " / "+past.get(Calendar.YEAR));
     }
     /**
      * @param args the command line arguments
@@ -222,9 +224,9 @@ public class indexFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAbout;
-    private javax.swing.JButton btnDaftar1;
-    private javax.swing.JButton btnDaftar2;
+    private javax.swing.JButton btnDaftar;
     private javax.swing.JButton btnPeraturan;
+    private javax.swing.JButton btnVisiMisi;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel waktuAjaran;
