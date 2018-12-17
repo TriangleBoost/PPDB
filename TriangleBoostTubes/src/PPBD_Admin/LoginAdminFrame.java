@@ -141,8 +141,8 @@ public class LoginAdminFrame extends javax.swing.JFrame {
             if (passText.getText().equals("admin")) { // cek apakah user admin berpassword admin
                 JOptionPane.showMessageDialog(this, "LOGIN BERHASIL");
                 //this.dispose(); // Auto Close Form
-                LoginAdminFrame LAF = new LoginAdminFrame();
-                LAF.setVisible(true);
+                IndexAdmin IA = new IndexAdmin();
+                IA.setVisible(true);
                 this.dispose();
                 
             }else{
