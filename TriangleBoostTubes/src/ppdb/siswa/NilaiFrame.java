@@ -6,6 +6,7 @@
 package ppdb.siswa;
 
 import javax.swing.JOptionPane;
+import ppdb.dao.dao;
 
 /**
  *
@@ -217,8 +218,15 @@ public class NilaiFrame extends javax.swing.JFrame {
         OF.setOrtu(this.ortu);
         OF.setNilai(this.nilai);
         OF.setOutput();
-        
         OF.setVisible(true);
+        
+        dao dao = new dao();
+        if(dao.insert(bio)) {
+            JOptionPane.showMessageDialog(this, "Data Berhasil Ditambahkan.", "INFO", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Data Gagal Ditambahkan.", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+        
         this.dispose();
     }//GEN-LAST:event_btnSubmitActionPerformed
 
