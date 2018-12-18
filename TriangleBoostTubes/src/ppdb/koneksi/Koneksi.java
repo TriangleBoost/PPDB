@@ -15,7 +15,7 @@ public class Koneksi {
     public static Connection connection(){
         if( con == null ){
             MysqlDataSource data = new MysqlDataSource();
-            data.setDatabaseName("project_java");
+            data.setDatabaseName("ppdb");
             data.setUser("root");
             data.setPassword("");
             try {
