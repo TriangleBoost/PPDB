@@ -29,7 +29,17 @@ public class OutputFrame extends javax.swing.JFrame {
         txtAnak.setText(anak);
         
     //----------ORTU-------------------
-    
+        namaAyah.setText(ortu.getNamaAyah());
+        pekerjaanAyah.setText(ortu.getPekerjaan());
+        gajiAyah.setText(ortu.getGaji());
+        telpAyah.setText(ortu.getTelp());
+        alamatAyah.setText(ortu.getAlamat());
+        
+        namaIbu.setText(ortu.getNamaIbu());
+        pekerjaanIbu.setText(ortu.getPekerjaanIbu());
+        gajiIbu.setText(ortu.getGajiIbu());
+        telpIbu.setText(ortu.getTelpIbu());
+        alamatIbu.setText(ortu.getAlamatIbu());
     
     
     
@@ -75,7 +85,17 @@ public class OutputFrame extends javax.swing.JFrame {
         txtAnak = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
+        namaAyah = new javax.swing.JLabel();
+        pekerjaanAyah = new javax.swing.JLabel();
+        gajiAyah = new javax.swing.JLabel();
+        telpAyah = new javax.swing.JLabel();
+        alamatAyah = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
+        namaIbu = new javax.swing.JLabel();
+        pekerjaanIbu = new javax.swing.JLabel();
+        gajiIbu = new javax.swing.JLabel();
+        telpIbu = new javax.swing.JLabel();
+        alamatIbu = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         nilaiMTK = new javax.swing.JLabel();
         nilaiBIND = new javax.swing.JLabel();
@@ -157,28 +177,86 @@ public class OutputFrame extends javax.swing.JFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Ayah"));
 
+        namaAyah.setText("jLabel1");
+
+        pekerjaanAyah.setText("jLabel1");
+
+        gajiAyah.setText("jLabel1");
+
+        telpAyah.setText("jLabel1");
+
+        alamatAyah.setText("jLabel1");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(103, 103, 103)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pekerjaanAyah)
+                    .addComponent(gajiAyah)
+                    .addComponent(telpAyah)
+                    .addComponent(alamatAyah)
+                    .addComponent(namaAyah))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 184, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(namaAyah)
+                .addGap(18, 18, 18)
+                .addComponent(pekerjaanAyah)
+                .addGap(18, 18, 18)
+                .addComponent(gajiAyah)
+                .addGap(18, 18, 18)
+                .addComponent(telpAyah)
+                .addGap(18, 18, 18)
+                .addComponent(alamatAyah)
+                .addGap(24, 24, 24))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Ibu"));
+
+        namaIbu.setText("jLabel1");
+
+        pekerjaanIbu.setText("jLabel1");
+
+        gajiIbu.setText("jLabel1");
+
+        telpIbu.setText("jLabel1");
+
+        alamatIbu.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 258, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(alamatIbu)
+                    .addComponent(telpIbu)
+                    .addComponent(gajiIbu)
+                    .addComponent(pekerjaanIbu)
+                    .addComponent(namaIbu))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 184, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(namaIbu)
+                .addGap(18, 18, 18)
+                .addComponent(pekerjaanIbu)
+                .addGap(18, 18, 18)
+                .addComponent(gajiIbu)
+                .addGap(18, 18, 18)
+                .addComponent(telpIbu)
+                .addGap(18, 18, 18)
+                .addComponent(alamatIbu)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -192,9 +270,8 @@ public class OutputFrame extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nilai Siswa", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
@@ -203,16 +280,16 @@ public class OutputFrame extends javax.swing.JFrame {
         nilaiMTK.setText("Matematika");
 
         nilaiBIND.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nilaiBIND.setText("Matematika");
+        nilaiBIND.setText("Bahasa Indo");
 
         nilaiBING.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nilaiBING.setText("Matematika");
+        nilaiBING.setText("Bahasa Inggris");
 
         nilaiIPA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nilaiIPA.setText("Matematika");
+        nilaiIPA.setText("IPA");
 
         nilaiRATATA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nilaiRATATA.setText("Matematika");
+        nilaiRATATA.setText("rata rata");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -289,7 +366,7 @@ public class OutputFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 11, Short.MAX_VALUE))
+                .addGap(0, 25, Short.MAX_VALUE))
         );
 
         pack();
@@ -334,6 +411,10 @@ public class OutputFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel alamatAyah;
+    private javax.swing.JLabel alamatIbu;
+    private javax.swing.JLabel gajiAyah;
+    private javax.swing.JLabel gajiIbu;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -341,11 +422,17 @@ public class OutputFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JLabel namaAyah;
+    private javax.swing.JLabel namaIbu;
     private javax.swing.JLabel nilaiBIND;
     private javax.swing.JLabel nilaiBING;
     private javax.swing.JLabel nilaiIPA;
     private javax.swing.JLabel nilaiMTK;
     private javax.swing.JLabel nilaiRATATA;
+    private javax.swing.JLabel pekerjaanAyah;
+    private javax.swing.JLabel pekerjaanIbu;
+    private javax.swing.JLabel telpAyah;
+    private javax.swing.JLabel telpIbu;
     private javax.swing.JLabel txtAgama;
     private javax.swing.JLabel txtAlamat;
     private javax.swing.JLabel txtAnak;
