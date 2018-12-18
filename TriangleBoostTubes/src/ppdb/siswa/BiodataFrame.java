@@ -6,8 +6,6 @@
 package ppdb.siswa;
 import Sekolah.*;
 
-import java.awt.Button;
-import static java.lang.Integer.max;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -24,12 +22,11 @@ import javax.swing.JFrame ;
  * @author HP
  */
 public class BiodataFrame extends javax.swing.JFrame {
-    private OutputFrame outputFrame;
-
+    
+    private Biodata bio;
     
 
     public BiodataFrame() {
-        outputFrame = new OutputFrame();
         
         initComponents();
         
@@ -63,8 +60,8 @@ public class BiodataFrame extends javax.swing.JFrame {
         jLabelNISN = new javax.swing.JLabel();
         NISNtext = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        lakilaki = new javax.swing.JRadioButton();
+        perempuan = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
         TahunComboBox = new javax.swing.JComboBox(this.populateYear().toArray());
         jLabelAgama = new javax.swing.JLabel();
@@ -104,19 +101,19 @@ public class BiodataFrame extends javax.swing.JFrame {
 
         jLabel8.setText("Jenis Kelamin");
 
-        genderGroup.add(jRadioButton1);
-        jRadioButton1.setText("Laki-Laki");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        genderGroup.add(lakilaki);
+        lakilaki.setText("Laki-Laki");
+        lakilaki.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                lakilakiActionPerformed(evt);
             }
         });
 
-        genderGroup.add(jRadioButton2);
-        jRadioButton2.setText("Perempuan");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        genderGroup.add(perempuan);
+        perempuan.setText("Perempuan");
+        perempuan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                perempuanActionPerformed(evt);
             }
         });
 
@@ -228,9 +225,9 @@ public class BiodataFrame extends javax.swing.JFrame {
                     .addComponent(AgamaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jRadioButton1)
+                            .addComponent(lakilaki)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jRadioButton2))
+                            .addComponent(perempuan))
                         .addComponent(Namatext)
                         .addComponent(NISNtext)
                         .addGroup(layout.createSequentialGroup()
@@ -271,8 +268,8 @@ public class BiodataFrame extends javax.swing.JFrame {
                     .addComponent(TahunComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
+                    .addComponent(lakilaki)
+                    .addComponent(perempuan)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -318,13 +315,13 @@ public class BiodataFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_keluarMenuActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void lakilakiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lakilakiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_lakilakiActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void perempuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perempuanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_perempuanActionPerformed
 
     private void KetextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KetextActionPerformed
         // TODO add your handling code here:
@@ -353,9 +350,32 @@ public class BiodataFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_AnaktextActionPerformed
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
-                OrtuFrame OF = new OrtuFrame();
-                OF.setVisible(true);
-                this.dispose();
+        String tgl = new String();
+        tgl += tanggalComboBox.getSelectedItem().toString();
+        tgl += "/"+BulanComboBox.getSelectedItem().toString();
+        tgl += "/"+TahunComboBox.getSelectedItem().toString();
+        String gender;
+        if(genderGroup.getSelection() == this.lakilaki.getModel()) {
+            gender = "Laki - Laki";
+        } else {
+            gender = "Perempuan";
+        }
+        this.bio = new Biodata(
+            NISNtext.getText(), 
+            Namatext.getText(),
+            Tempatfield.getText(),
+            tgl,
+            gender,
+            AgamaComboBox.getSelectedItem().toString(),
+            Telptext.getText(),
+            Alamattext.getText(),
+            Anaktext.getText(),
+            Ketext.getText()
+       ); 
+       OrtuFrame OF = new OrtuFrame();
+       OF.setBio(this.bio);
+       OF.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_btnNextActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -439,9 +459,9 @@ public class BiodataFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JMenuItem keluarMenu;
+    private javax.swing.JRadioButton lakilaki;
+    private javax.swing.JRadioButton perempuan;
     private javax.swing.JComboBox<String> tanggalComboBox;
     // End of variables declaration//GEN-END:variables
 }
