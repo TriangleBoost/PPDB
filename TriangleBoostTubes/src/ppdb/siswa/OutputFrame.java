@@ -8,10 +8,42 @@ package ppdb.siswa;
 import javax.swing.table.DefaultTableModel;
 public class OutputFrame extends javax.swing.JFrame {
     
+    private Biodata bio;
+    private Ortu ortu;
+    private Nilai nilai;
    
     public OutputFrame() {
    
         initComponents();
+        
+        labelSiswa.setText(bio.getNisn());
+        labelSiswa.setText(bio.getNama());
+        labelSiswa.setText(bio.getTmptLahir());
+        labelSiswa.setText(bio.getTglLahir());
+        labelSiswa.setText(bio.getKelamin());
+        labelSiswa.setText(bio.getAgama());
+        labelSiswa.setText(bio.getTelp());
+        labelSiswa.setText(bio.getAlamat());
+        labelSiswa.setText(bio.getAnak());
+        labelSiswa.setText(bio.getBersaudara());
+        
+        labelOrtu.setText(ortu.getNamaAyah());
+        labelOrtu.setText(ortu.getPekerjaan());
+        labelOrtu.setText(ortu.getGaji());
+        labelOrtu.setText(ortu.getTelp());
+        labelOrtu.setText(ortu.getAlamat());
+        
+        labelOrtu.setText(ortu.getNamaIbu());
+        labelOrtu.setText(ortu.getPekerjaanIbu());
+        labelOrtu.setText(ortu.getGajiIbu());
+        labelOrtu.setText(ortu.getTelpIbu());
+        labelOrtu.setText(ortu.getAlamatIbu());
+        
+        labelNilai.setText(Float.toString(nilai.getMtk()));
+        labelNilai.setText(Float.toString(nilai.getBindo()));
+        labelNilai.setText(Float.toString(nilai.getBing()));
+        labelNilai.setText(Float.toString(nilai.getIpa()));
+        labelNilai.setText(Float.toString(nilai.getRataRata()));
         
     }
 
@@ -26,18 +58,51 @@ public class OutputFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        labelSiswa = new javax.swing.JLabel();
+        labelOrtu = new javax.swing.JLabel();
+        labelNilai = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("INFORMASI PENDAFTAR");
+
+        labelSiswa.setText("Biodata Siswa");
+
+        labelOrtu.setText("Orang Tua");
+
+        labelNilai.setText("Nilai Siswa");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(30, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(labelSiswa)
+                        .addGap(44, 44, 44)
+                        .addComponent(labelOrtu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelNilai)
+                        .addGap(96, 96, 96))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 286, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelSiswa)
+                    .addComponent(labelOrtu)
+                    .addComponent(labelNilai))
+                .addGap(228, 228, 228))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -45,14 +110,13 @@ public class OutputFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 18, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -97,6 +161,10 @@ public class OutputFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelNilai;
+    private javax.swing.JLabel labelOrtu;
+    private javax.swing.JLabel labelSiswa;
     // End of variables declaration//GEN-END:variables
 }
