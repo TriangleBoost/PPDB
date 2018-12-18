@@ -10,7 +10,7 @@ package ppdb.siswa;
  * @author Dhandy
  */
 public class Nilai {
-    float mtk, bindo, bing, ipa, rataRata;
+    float mtk, bindo, bing, ipa, rataRata ;
 
     public Nilai(float mtk, float bindo, float bing, float ipa, float rataRata) {
         this.mtk = mtk;
@@ -39,6 +39,6 @@ public class Nilai {
     public float getRataRata() {
         return rataRata;
     }
-    
+   
     
 }
