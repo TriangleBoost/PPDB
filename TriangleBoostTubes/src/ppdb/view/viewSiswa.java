@@ -7,6 +7,7 @@ package ppdb.view;
 public class viewSiswa {
     
     private String nama,nisn,telp,alamat,jenisKelamin,agama;
+    private float nilaiMat,nilaiIpa,nilaiInggris,nilaiBindo;
     
     public viewSiswa() {
     }
@@ -57,6 +58,38 @@ public class viewSiswa {
 
     public void setAgama(String agama) {
         this.agama = agama;
+    }
+
+    public float getNilaiMat() {
+        return nilaiMat;
+    }
+
+    public void setNilaiMat(float nilaiMat) {
+        this.nilaiMat = nilaiMat;
+    }
+
+    public float getNilaiIpa() {
+        return nilaiIpa;
+    }
+
+    public void setNilaiIpa(float nilaiIpa) {
+        this.nilaiIpa = nilaiIpa;
+    }
+
+    public float getNilaiInggris() {
+        return nilaiInggris;
+    }
+
+    public void setNilaiInggris(float nilaiInggris) {
+        this.nilaiInggris = nilaiInggris;
+    }
+
+    public float getNilaiBindo() {
+        return nilaiBindo;
+    }
+
+    public void setNilaiBindo(float nilaiBindo) {
+        this.nilaiBindo = nilaiBindo;
     }
     
 }
