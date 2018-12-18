@@ -52,6 +52,7 @@ public class indexFrame extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PEMERINTAH KABUPATEN CIGARET\n", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Arial", 1, 14))); // NOI18N
 
         btnPeraturan.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnPeraturan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/peraturan.png"))); // NOI18N
         btnPeraturan.setText("PERATURAN PPDB");
         btnPeraturan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +61,7 @@ public class indexFrame extends javax.swing.JFrame {
         });
 
         btnAbout.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/about.png"))); // NOI18N
         btnAbout.setText("TENTANG SEKOLAH");
         btnAbout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +92,8 @@ public class indexFrame extends javax.swing.JFrame {
         });
 
         btnDaftar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnDaftar.setText("DAFTAR");
+        btnDaftar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/start.png"))); // NOI18N
+        btnDaftar.setText("MULAI PPDB");
         btnDaftar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDaftarActionPerformed(evt);
@@ -194,8 +197,8 @@ public class indexFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVisiMisiActionPerformed
 
     private void btnDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDaftarActionPerformed
-        BiodataFrame BF = new BiodataFrame();
-                BF.setVisible(true);
+        IndexSiswaFrame ISF = new IndexSiswaFrame();
+                ISF.setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_btnDaftarActionPerformed
     // MENGAMBIL TAHUN SEKARANG DAN TAHUN SELANJUTNYA
