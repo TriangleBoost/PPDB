@@ -152,14 +152,14 @@ public class IndexAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonProsesActionPerformed
 
     private void jButtonDaftarUlangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDaftarUlangActionPerformed
-        Pendaftar P = new Pendaftar();
-        P.setVisible(true);
+        DaftarUlang DU = new DaftarUlang();
+        DU.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonDaftarUlangActionPerformed
 
     private void jButtonGugurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGugurActionPerformed
-        Pendaftar P = new Pendaftar();
-        P.setVisible(true);
+        SiswaGugur SG = new SiswaGugur();
+        SG.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonGugurActionPerformed
 
