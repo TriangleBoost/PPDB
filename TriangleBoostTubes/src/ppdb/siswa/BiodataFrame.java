@@ -7,11 +7,15 @@ package ppdb.siswa;
 import Sekolah.*;
 
 import java.awt.Button;
+import static java.lang.Integer.max;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import javax.swing.ButtonModel;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame ;
 
@@ -27,8 +31,16 @@ public class BiodataFrame extends javax.swing.JFrame {
     public BiodataFrame() {
         outputFrame = new OutputFrame();
         
-        
         initComponents();
+        
+    }
+    
+    private ArrayList<String> populateYear() {
+        ArrayList<String> years_tmp = new ArrayList<String>();
+        for(int years = 1980; years<=Calendar.getInstance().get(Calendar.YEAR); years++) {
+            years_tmp.add(years+"");
+        }
+        return years_tmp;
     }
     
     /**
@@ -54,7 +66,7 @@ public class BiodataFrame extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
-        TahunComboBox = new javax.swing.JComboBox<>();
+        TahunComboBox = new javax.swing.JComboBox(this.populateYear().toArray());
         jLabelAgama = new javax.swing.JLabel();
         AgamaComboBox = new javax.swing.JComboBox<>();
         Telptext = new javax.swing.JTextField();
@@ -111,7 +123,6 @@ public class BiodataFrame extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setText("/");
 
-        TahunComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1999" }));
         TahunComboBox.setSelectedIndex(-1);
         TahunComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
