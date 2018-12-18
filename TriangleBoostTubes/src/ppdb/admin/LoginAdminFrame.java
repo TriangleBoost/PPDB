@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PPBD_Admin;
+package ppdb.admin;
 
-import PPDB_Siswa.BiodataFrame;
+import ppdb.siswa.BiodataFrame;
 import javax.swing.JOptionPane;
 
 
