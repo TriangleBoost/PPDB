@@ -13,11 +13,24 @@ import javax.swing.JOptionPane;
  */
 public class NilaiFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NilaiFrame
-     */
+    private Biodata bio;
+    private Ortu ortu;
+    private Nilai nilai;
+    
     public NilaiFrame() {
         initComponents();
+    }
+    
+    public void setBio(Biodata bio) {
+        this.bio = bio;
+    }
+
+    public void setOrtu(Ortu ortu) {
+        this.ortu = ortu;
+    }
+
+    public void setNilai(Nilai nilai) {
+        this.nilai = nilai;
     }
 
     /**
@@ -192,15 +205,21 @@ public class NilaiFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-       
-                
-             StringBuilder sb = new StringBuilder();
-             sb.append("Nilai Matematika \t\t: ").append(NilaiMTK.getText()).append("\n");
-             sb.append("Nilai Bahasa Indonesia \t\t: ").append(NilaiBindo.getText()).append("\n");
-             sb.append("Nilai Bahasa Inggris \t\t: ").append(NilaiBING.getText()).append("\n");
-             sb.append("Nilai Ilmu Pengetahuan Alam \t: ").append(NilaiIPA.getText()).append("\n");
-             sb.append("Nilai Rata Rata \t\t: ").append(RataRata.getText()).append("\n");
-                JOptionPane.showMessageDialog(this, sb, "Nilai Siswa", JOptionPane.INFORMATION_MESSAGE);
+        this.nilai = new Nilai(
+            new Float(this.NilaiMTK.getText()),
+            new Float(this.NilaiBindo.getText()),
+            new Float(this.NilaiBING.getText()),
+            new Float(this.NilaiIPA.getText()),
+            new Float(this.RataRata.getText())
+        );
+        OutputFrame OF = new OutputFrame();
+        OF.setBio(this.bio);
+        OF.setOrtu(this.ortu);
+        OF.setNilai(this.nilai);
+        OF.setOutput();
+        
+        OF.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
