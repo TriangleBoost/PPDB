@@ -29,8 +29,10 @@ public class IndexAdmin extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonDataPendaftar = new javax.swing.JButton();
+        jButtonProses = new javax.swing.JButton();
+        jButtonDaftarUlang = new javax.swing.JButton();
+        jButtonGugur = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -40,11 +42,37 @@ public class IndexAdmin extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
 
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton1.setText("DATA PENDAFTAR");
+        jButtonDataPendaftar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButtonDataPendaftar.setText("DATA PENDAFTAR");
+        jButtonDataPendaftar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDataPendaftarActionPerformed(evt);
+            }
+        });
 
-        jButton3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton3.setText("DATA PENDAFTAR ULANG");
+        jButtonProses.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButtonProses.setText("PROSES DAFTAR ULANG");
+        jButtonProses.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonProsesActionPerformed(evt);
+            }
+        });
+
+        jButtonDaftarUlang.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButtonDaftarUlang.setText("DATA DAFTAR ULANG");
+        jButtonDaftarUlang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDaftarUlangActionPerformed(evt);
+            }
+        });
+
+        jButtonGugur.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButtonGugur.setText("SISWA GUGUR");
+        jButtonGugur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGugurActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("Menu");
 
@@ -74,11 +102,15 @@ public class IndexAdmin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButtonDataPendaftar, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                            .addComponent(jButtonDaftarUlang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3))
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButtonGugur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonProses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -90,9 +122,13 @@ public class IndexAdmin extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(139, Short.MAX_VALUE))
+                    .addComponent(jButtonDataPendaftar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonProses, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonDaftarUlang, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonGugur, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pack();
@@ -102,6 +138,30 @@ public class IndexAdmin extends javax.swing.JFrame {
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jButtonDataPendaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDataPendaftarActionPerformed
+        Pendaftar P = new Pendaftar();
+        P.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonDataPendaftarActionPerformed
+
+    private void jButtonProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProsesActionPerformed
+        ProsesDaftarUlang PDU = new ProsesDaftarUlang();
+        PDU.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonProsesActionPerformed
+
+    private void jButtonDaftarUlangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDaftarUlangActionPerformed
+        Pendaftar P = new Pendaftar();
+        P.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonDaftarUlangActionPerformed
+
+    private void jButtonGugurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGugurActionPerformed
+        Pendaftar P = new Pendaftar();
+        P.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonGugurActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,8 +199,10 @@ public class IndexAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonDaftarUlang;
+    private javax.swing.JButton jButtonDataPendaftar;
+    private javax.swing.JButton jButtonGugur;
+    private javax.swing.JButton jButtonProses;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
