@@ -11,11 +11,19 @@ package ppdb.siswa;
  */
 public class OrtuFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewJFrame
-     */
+    private Biodata bio;
+    private Ortu ortu;
+    
     public OrtuFrame() {
         initComponents();
+    }
+
+    public void setBio(Biodata bio) {
+        this.bio = bio;
+    }
+
+    public void setOrtu(Ortu ortu) {
+        this.ortu = ortu;
     }
 
     /**
@@ -80,6 +88,12 @@ public class OrtuFrame extends javax.swing.JFrame {
 
         jLabelAlamatIbu.setText("Alamat");
 
+        AlamatIbu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AlamatIbuActionPerformed(evt);
+            }
+        });
+
         jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -110,16 +124,16 @@ public class OrtuFrame extends javax.swing.JFrame {
                         .addGap(55, 55, 55)
                         .addComponent(NamaAyah))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabelPekerjaanAyah)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabelTlpnIbu)
                                     .addComponent(jLabelAlamatIbu))
-                                .addGap(72, 72, 72)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TeleponIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(AlamatIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(TeleponIbu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(AlamatIbu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabelNamaIbu, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -268,10 +282,28 @@ public class OrtuFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        this.ortu = new Ortu(
+            NamaAyah.getText(),
+            PekerjaanAyah.getText(),
+            GajiAyah.getText(),
+            TeleponAyah.getText(),
+            AlamatAyah.getText(),
+            NamaIbu.getText(),
+            PekerjaanIbu.getText(),
+            GajiIbu.getText(),
+            TeleponIbu.getText(),
+            AlamatIbu.getText()
+        );
         NilaiFrame NF = new NilaiFrame();
+        NF.setBio(bio);
+        NF.setOrtu(ortu);
         NF.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnNextActionPerformed
+
+    private void AlamatIbuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlamatIbuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AlamatIbuActionPerformed
 
     /**
      * @param args the command line arguments
