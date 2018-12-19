@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package ppdb.siswa;
-
+import ppdb.list.siswa.*;
 /**
  *
  * @author HP
@@ -100,7 +100,9 @@ public class IndexSiswaFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnListPendaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListPendaftarActionPerformed
-        // TODO add your handling code here:
+        ListPendaftar LP = new ListPendaftar();
+        LP.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnListPendaftarActionPerformed
 
     private void btndaftarSekarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndaftarSekarangActionPerformed

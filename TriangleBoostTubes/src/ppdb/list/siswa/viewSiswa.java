@@ -3,7 +3,7 @@
 *   Email : dzikrialif99@gmail.com
 *   Hawlet Packard
 */
-package ppdb.view;
+package ppdb.list.siswa;
 public class viewSiswa {
     
     private String nama,nisn,telp,alamat,jenisKelamin,agama;

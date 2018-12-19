@@ -8,7 +8,7 @@ package ppdb.model;
 
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import ppdb.view.viewSiswa;
+import ppdb.list.siswa.viewSiswa;
 
 public class tableModelSiswa extends AbstractTableModel {
 

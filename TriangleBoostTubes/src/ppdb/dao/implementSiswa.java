@@ -2,9 +2,8 @@ package ppdb.dao;
 
 import java.util.List;
 import ppdb.model.*;
-import ppdb.view.*;
 import java.util.List;
-import ppdb.view.viewSiswa;
+import ppdb.list.siswa.viewSiswa;
 
 /**
  *

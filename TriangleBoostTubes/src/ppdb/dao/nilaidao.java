@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.util.List;
 import ppdb.koneksi.Koneksi;
 import ppdb.siswa.Nilai;
-import ppdb.view.viewSiswa;
+import ppdb.list.siswa.viewSiswa;
 
 /**
  *

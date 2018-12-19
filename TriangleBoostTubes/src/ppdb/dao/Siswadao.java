@@ -17,7 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import static ppdb.koneksi.Koneksi.connection;
 import ppdb.siswa.Biodata;
-import ppdb.view.viewSiswa;
+import ppdb.list.siswa.viewSiswa;
 
 public class Siswadao implements implementSiswa {
     Connection connect;
