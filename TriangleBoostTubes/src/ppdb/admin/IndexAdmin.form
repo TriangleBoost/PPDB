@@ -55,20 +55,28 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jSeparator1" min="-2" pref="454" max="-2" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButtonDataPendaftar" pref="194" max="32767" attributes="0"/>
-                          <Component id="jButtonDaftarUlang" max="32767" attributes="0"/>
+                          <Component id="jSeparator1" min="-2" pref="454" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jButtonDataPendaftar" pref="194" max="32767" attributes="0"/>
+                                  <Component id="jButtonDaftarUlang" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jButtonGugur" max="32767" attributes="0"/>
+                                  <Component id="jButtonProses" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButtonGugur" max="32767" attributes="0"/>
-                          <Component id="jButtonProses" max="32767" attributes="0"/>
-                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" pref="80" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="30" max="32767" attributes="0"/>
@@ -92,7 +100,9 @@
                   <Component id="jButtonDaftarUlang" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                   <Component id="jButtonGugur" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="64" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -150,6 +160,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGugurActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="EXIT"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

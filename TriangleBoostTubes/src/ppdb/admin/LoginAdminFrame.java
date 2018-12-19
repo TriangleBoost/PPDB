@@ -7,13 +7,14 @@ package ppdb.admin;
 
 import ppdb.siswa.BiodataFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import java.sql.*;
 import ppdb.koneksi.Koneksi;
 
 
 public class LoginAdminFrame extends javax.swing.JFrame {
-
+    Connection connect = Koneksi.connection();
+    ResultSet rs = null;
+    PreparedStatement ps = null;
     /**
      * Creates new form LoginFrame
      */
@@ -134,13 +135,6 @@ public class LoginAdminFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     
-    public JTextField userText() {
-        return userText;
-    }
-
-    public JTextField passText() {
-        return passText;
-    }
     
     
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
@@ -149,25 +143,47 @@ public class LoginAdminFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        if (userText.getText().equals("admin")) { // cek apakah user == admin
-            if (passText.getText().equals("admin")) { // cek apakah user admin berpassword admin
-                JOptionPane.showMessageDialog(this, "LOGIN BERHASIL");
-                //this.dispose(); // Auto Close Form
+//        if (userText.getText().equals("admin")) { // cek apakah user == admin
+//            if (passText.getText().equals("admin")) { // cek apakah user admin berpassword admin
+//                JOptionPane.showMessageDialog(this, "LOGIN BERHASIL");
+//                //this.dispose(); // Auto Close Form
+//                IndexAdmin IA = new IndexAdmin();
+//                IA.setVisible(true);
+//                this.dispose();
+//                
+//            }else{
+//                JOptionPane.showMessageDialog(this, "Password salah","Error",JOptionPane.ERROR_MESSAGE);
+//                passText.setText("");
+//                passText.requestFocus();
+//            }
+//        }else{
+//            JOptionPane.showMessageDialog(this, "Username dan password salah","error",JOptionPane.ERROR_MESSAGE);
+//            userText.setText("");
+//            passText.setText("");
+//            userText.requestFocus();
+//        }
+
+        String sql = "SELECT * FROM admin WHERE username=? AND password=? ;";
+        try {
+            ps = connect.prepareStatement(sql);
+            ps.setString(1, userText.getText());
+            ps.setString(2, String.valueOf(passText.getPassword()));
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(null, "LOGIN BERHASIL");
                 IndexAdmin IA = new IndexAdmin();
                 IA.setVisible(true);
                 this.dispose();
                 
             }else{
-                JOptionPane.showMessageDialog(this, "Password salah","Error",JOptionPane.ERROR_MESSAGE);
-                passText.setText("");
-                passText.requestFocus();
+                JOptionPane.showMessageDialog(this, "Data Tidak ada");
+                
             }
-        }else{
-            JOptionPane.showMessageDialog(this, "Username dan password salah","error",JOptionPane.ERROR_MESSAGE);
-            userText.setText("");
-            passText.setText("");
-            userText.requestFocus();
+            
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, e);
         }
+            
     }//GEN-LAST:event_loginButtonActionPerformed
 
     /**
