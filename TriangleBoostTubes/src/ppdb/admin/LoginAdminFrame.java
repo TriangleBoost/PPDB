@@ -7,6 +7,9 @@ package ppdb.admin;
 
 import ppdb.siswa.BiodataFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import java.sql.*;
+import ppdb.koneksi.Koneksi;
 
 
 public class LoginAdminFrame extends javax.swing.JFrame {
@@ -130,7 +133,16 @@ public class LoginAdminFrame extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    
+    public JTextField userText() {
+        return userText;
+    }
 
+    public JTextField passText() {
+        return passText;
+    }
+    
+    
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         userText.setText("");
         passText.setText("");
