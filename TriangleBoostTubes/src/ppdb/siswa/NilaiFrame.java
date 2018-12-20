@@ -7,6 +7,7 @@ package ppdb.siswa;
 
 import javax.swing.JOptionPane;
 import ppdb.dao.nilaiDao;
+import ppdb.dao.ortuDao;
 import ppdb.dao.siswaDao;
 
 /**
@@ -228,7 +229,9 @@ public class NilaiFrame extends javax.swing.JFrame {
         OF.setVisible(true);
         
         siswaDao dao = new siswaDao() ;
-        if(dao.insert(bio)) {
+        nilaiDao nd = new nilaiDao() ;
+        ortuDao od = new ortuDao() ;
+        if(dao.insert(bio) && nd.insert(nilai) && od.insert(ortu)) {
             JOptionPane.showMessageDialog(this, "Data Berhasil Ditambahkan.", "INFO", JOptionPane.INFORMATION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(this, "Data Gagal Ditambahkan.", "ERROR", JOptionPane.ERROR_MESSAGE);
