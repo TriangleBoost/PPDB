@@ -8,10 +8,94 @@ public class viewSiswa {
     
     private String nisn,nama,tempat,Tgllahir,jenisKelamin,agama,telp,alamat;
     private float nilaiMat,nilaiIpa,nilaiInggris,nilaiBindo,rataRata;
+    private String namaAyah, pekerjaanAyah, gajiAyah, telpAyah, alamatAyah;
+    private String namaIbu, pekerjaanIbu, gajiIbu, telpIbu, alamatIbu;
     
     public viewSiswa() {
     }
 
+    public String getNamaAyah() {
+        return namaAyah;
+    }
+
+    public void setNamaAyah(String namaAyah) {
+        this.namaAyah = namaAyah;
+    }
+
+    public String getPekerjaanAyah() {
+        return pekerjaanAyah;
+    }
+
+    public void setPekerjaanAyah(String pekerjaanAyah) {
+        this.pekerjaanAyah = pekerjaanAyah;
+    }
+
+    public String getGajiAyah() {
+        return gajiAyah;
+    }
+
+    public void setGajiAyah(String gajiAyah) {
+        this.gajiAyah = gajiAyah;
+    }
+
+    public String getTelpAyah() {
+        return telpAyah;
+    }
+
+    public void setTelpAyah(String telpAyah) {
+        this.telpAyah = telpAyah;
+    }
+
+    public String getAlamatAyah() {
+        return alamatAyah;
+    }
+
+    public void setAlamatAyah(String alamatAyah) {
+        this.alamatAyah = alamatAyah;
+    }
+
+    public String getNamaIbu() {
+        return namaIbu;
+    }
+
+    public void setNamaIbu(String namaIbu) {
+        this.namaIbu = namaIbu;
+    }
+
+    public String getPekerjaanIbu() {
+        return pekerjaanIbu;
+    }
+
+    public void setPekerjaanIbu(String pekerjaanIbu) {
+        this.pekerjaanIbu = pekerjaanIbu;
+    }
+
+    public String getGajiIbu() {
+        return gajiIbu;
+    }
+
+    public void setGajiIbu(String gajiIbu) {
+        this.gajiIbu = gajiIbu;
+    }
+
+    public String getTelpIbu() {
+        return telpIbu;
+    }
+
+    public void setTelpIbu(String telpIbu) {
+        this.telpIbu = telpIbu;
+    }
+
+    public String getAlamatIbu() {
+        return alamatIbu;
+    }
+
+    public void setAlamatIbu(String alamatIbu) {
+        this.alamatIbu = alamatIbu;
+    }
+    
+    
+    
     public String getTempat() {
         return tempat;
     }
