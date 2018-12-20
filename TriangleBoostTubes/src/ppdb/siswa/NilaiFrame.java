@@ -18,6 +18,7 @@ public class NilaiFrame extends javax.swing.JFrame {
     private Biodata bio;
     private Ortu ortu;
     private Nilai nilai;
+    private Output output;
     
     public NilaiFrame() {
         initComponents();
@@ -35,9 +36,10 @@ public class NilaiFrame extends javax.swing.JFrame {
         this.nilai = nilai;
     }
     
-    //public void setOutput(Output output) {
-    //    this.output = output ;
-    //}
+    public void setOutput(Output output){
+        this.output = output;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -222,7 +224,7 @@ public class NilaiFrame extends javax.swing.JFrame {
         OF.setBio(this.bio);
         OF.setOrtu(this.ortu);
         OF.setNilai(this.nilai);
-        //OF.setOutput(this.output);
+        OF.setOutput(this.output);
         OF.setVisible(true);
         
         siswaDao dao = new siswaDao() ;
