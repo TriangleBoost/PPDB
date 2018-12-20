@@ -20,6 +20,26 @@ public class Nilai {
         this.rataRata = rataRata;
     }
 
+    public void setMtk(float mtk) {
+        this.mtk = mtk;
+    }
+
+    public void setBindo(float bindo) {
+        this.bindo = bindo;
+    }
+
+    public void setBing(float bing) {
+        this.bing = bing;
+    }
+
+    public void setIpa(float ipa) {
+        this.ipa = ipa;
+    }
+
+    public void setRataRata(float rataRata) {
+        this.rataRata = rataRata;
+    }
+    
     public float getMtk() {
         return mtk;
     }
