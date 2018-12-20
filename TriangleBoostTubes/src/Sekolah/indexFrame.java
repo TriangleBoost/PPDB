@@ -91,6 +91,7 @@ public class indexFrame extends javax.swing.JFrame {
 
         btnVisiMisi.setBackground(new java.awt.Color(255, 255, 255));
         btnVisiMisi.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnVisiMisi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/about.png"))); // NOI18N
         btnVisiMisi.setText("VISI MISI");
         btnVisiMisi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
