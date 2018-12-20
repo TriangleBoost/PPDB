@@ -110,7 +110,6 @@
                           <Component id="txtAgama" pref="238" max="32767" attributes="0"/>
                           <Component id="txtTelp" pref="238" max="32767" attributes="0"/>
                           <Component id="txtAlamat" pref="238" max="32767" attributes="0"/>
-                          <Component id="txtAnak" pref="238" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -133,8 +132,6 @@
                       <Component id="txtTelp" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="txtAlamat" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtAnak" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -178,12 +175,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="txtAlamat">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="jLabel1"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="txtAnak">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="jLabel1"/>

@@ -10,6 +10,7 @@ public class OutputFrame extends javax.swing.JFrame {
     private Biodata bio;
     private Ortu ortu;
     private Nilai nilai;
+    private Output output ;
    
     public OutputFrame() {
         initComponents();
@@ -25,8 +26,6 @@ public class OutputFrame extends javax.swing.JFrame {
         txtAgama.setText(bio.getAgama());
         txtTelp.setText(bio.getTelp());
         txtAlamat.setText(bio.getAlamat());
-        String anak = "Anak ke "+ bio.getAnak() +" dari "+ bio.getBersaudara() +" Bersudara";
-        txtAnak.setText(anak);
         
     //----------ORTU-------------------
         namaAyah.setText(ortu.getNamaAyah());
@@ -62,6 +61,10 @@ public class OutputFrame extends javax.swing.JFrame {
     public void setNilai(Nilai nilai) {
         this.nilai = nilai;
     }
+    
+    public void setOutput(Output output) {
+        this.output = output ;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -82,7 +85,6 @@ public class OutputFrame extends javax.swing.JFrame {
         txtAgama = new javax.swing.JLabel();
         txtTelp = new javax.swing.JLabel();
         txtAlamat = new javax.swing.JLabel();
-        txtAnak = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         namaAyah = new javax.swing.JLabel();
@@ -131,9 +133,6 @@ public class OutputFrame extends javax.swing.JFrame {
         txtAlamat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtAlamat.setText("jLabel1");
 
-        txtAnak.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtAnak.setText("jLabel1");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -147,8 +146,7 @@ public class OutputFrame extends javax.swing.JFrame {
                     .addComponent(txtKelamin, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
                     .addComponent(txtAgama, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
                     .addComponent(txtTelp, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                    .addComponent(txtAlamat, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                    .addComponent(txtAnak, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))
+                    .addComponent(txtAlamat, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -168,8 +166,6 @@ public class OutputFrame extends javax.swing.JFrame {
                 .addComponent(txtTelp)
                 .addGap(18, 18, 18)
                 .addComponent(txtAlamat)
-                .addGap(18, 18, 18)
-                .addComponent(txtAnak)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -435,7 +431,6 @@ public class OutputFrame extends javax.swing.JFrame {
     private javax.swing.JLabel telpIbu;
     private javax.swing.JLabel txtAgama;
     private javax.swing.JLabel txtAlamat;
-    private javax.swing.JLabel txtAnak;
     private javax.swing.JLabel txtKelamin;
     private javax.swing.JLabel txtNISN;
     private javax.swing.JLabel txtNama;
