@@ -6,6 +6,7 @@
 package ppdb.siswa;
 
 import javax.swing.JOptionPane;
+import ppdb.dao.nilaiDao;
 import ppdb.dao.siswaDao;
 
 /**
@@ -33,6 +34,10 @@ public class NilaiFrame extends javax.swing.JFrame {
     public void setNilai(Nilai nilai) {
         this.nilai = nilai;
     }
+    
+    //public void setOutput(Output output) {
+    //    this.output = output ;
+    //}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -217,10 +222,10 @@ public class NilaiFrame extends javax.swing.JFrame {
         OF.setBio(this.bio);
         OF.setOrtu(this.ortu);
         OF.setNilai(this.nilai);
-        OF.setOutput();
+        //OF.setOutput(this.output);
         OF.setVisible(true);
         
-        siswaDao dao = new siswaDao();
+        siswaDao dao = new siswaDao() ;
         if(dao.insert(bio)) {
             JOptionPane.showMessageDialog(this, "Data Berhasil Ditambahkan.", "INFO", JOptionPane.INFORMATION_MESSAGE);
         } else {
