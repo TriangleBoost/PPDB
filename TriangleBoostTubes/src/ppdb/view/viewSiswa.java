@@ -6,12 +6,38 @@
 package ppdb.view;
 public class viewSiswa {
     
-    private String nama,nisn,telp,alamat,jenisKelamin,agama;
-    private float nilaiMat,nilaiIpa,nilaiInggris,nilaiBindo;
+    private String nisn,nama,tempat,Tgllahir,jenisKelamin,agama,telp,alamat;
+    private float nilaiMat,nilaiIpa,nilaiInggris,nilaiBindo,rataRata;
     
     public viewSiswa() {
     }
 
+    public String getTempat() {
+        return tempat;
+    }
+
+    public void setTempat(String tempat) {
+        this.tempat = tempat;
+    }
+
+    public String getTgllahir() {
+        return Tgllahir;
+    }
+
+    public void setTgllahir(String Tgllahir) {
+        this.Tgllahir = Tgllahir;
+    }
+    
+    
+    public float getRataRata() {
+        return rataRata;
+    }
+
+    public void setRataRata(float rataRata) {
+        this.rataRata = rataRata;
+    }
+   
+    
     public String getNama() {
         return nama;
     }
