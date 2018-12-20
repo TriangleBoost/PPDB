@@ -313,9 +313,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="TahunComboBox">
-      <Properties>
-        <Property name="selectedIndex" type="int" value="-1"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TahunComboBoxActionPerformed"/>
       </Events>
