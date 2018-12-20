@@ -10,6 +10,7 @@ import ppdb.model.tableModelSiswa;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +49,7 @@ public class siswaDao implements implementSiswa {
            if(i == 1) {
                return true;
            }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
         return false;
