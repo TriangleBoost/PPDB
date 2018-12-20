@@ -29,10 +29,10 @@ public class OutputFrame extends javax.swing.JFrame {
         
     //----------ORTU-------------------
         namaAyah.setText(ortu.getNamaAyah());
-        pekerjaanAyah.setText(ortu.getPekerjaan());
-        gajiAyah.setText(ortu.getGaji());
-        telpAyah.setText(ortu.getTelp());
-        alamatAyah.setText(ortu.getAlamat());
+        pekerjaanAyah.setText(ortu.getPekerjaanAyah());
+        gajiAyah.setText(ortu.getGajiAyah());
+        telpAyah.setText(ortu.getTelpAyah());
+        alamatAyah.setText(ortu.getAlamatAyah());
         
         namaIbu.setText(ortu.getNamaIbu());
         pekerjaanIbu.setText(ortu.getPekerjaanIbu());
