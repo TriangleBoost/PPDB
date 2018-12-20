@@ -11,9 +11,9 @@ package ppdb.siswa;
  */
 public class Biodata {
     String nisn, nama, tmptLahir, tglLahir,
-            kelamin, agama, telp, alamat, anak, bersaudara;
+            kelamin, agama, telp, alamat;
 
-    public Biodata(String nisn, String nama, String tmptLahir, String tglLahir, String kelamin, String agama, String telp, String alamat, String anak, String bersaudara) {
+    public Biodata(String nisn, String nama, String tmptLahir, String tglLahir, String kelamin, String agama, String telp, String alamat) {
         this.nisn = nisn;
         this.nama = nama;
         this.tmptLahir = tmptLahir;
@@ -22,8 +22,6 @@ public class Biodata {
         this.agama = agama;
         this.telp = telp;
         this.alamat = alamat;
-        this.anak = anak;
-        this.bersaudara = bersaudara;
     }
 
     public String getNisn() {
@@ -57,14 +55,5 @@ public class Biodata {
     public String getAlamat() {
         return alamat;
     }
-
-    public String getAnak() {
-        return anak;
-    }
-
-    public String getBersaudara() {
-        return bersaudara;
-    }
-    
     
 }
