@@ -305,26 +305,26 @@ public class BiodataFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
-        String tgl = new String();
-        tgl += tanggalComboBox.getSelectedItem().toString();
-        tgl += "/"+BulanComboBox.getSelectedItem().toString();
-        tgl += "/"+TahunComboBox.getSelectedItem().toString();
-        String gender;
-        if(genderGroup.getSelection() == this.lakilaki.getModel()) {
-            gender = "Laki - Laki";
-        } else {
-            gender = "Perempuan";
-        }
-        this.bio = new Biodata(
-            NISNtext.getText(), 
-            Namatext.getText(),
-            Tempatfield.getText(),
-            tgl,
-            gender,
-            AgamaComboBox.getSelectedItem().toString(),
-            Telptext.getText(),
-            Alamattext.getText()
-       ); 
+       // String tgl = new String();
+       //tgl += tanggalComboBox.getSelectedItem().toString();
+        //tgl += "/"+BulanComboBox.getSelectedItem().toString();
+        //tgl += "/"+TahunComboBox.getSelectedItem().toString();
+        //String gender;
+        //if(genderGroup.getSelection() == this.lakilaki.getModel()) {
+          //  gender = "Laki - Laki";
+        //} else {
+          //  gender = "Perempuan";
+        //}
+        //this.bio = new Biodata(
+         //   NISNtext.getText(), 
+           // Namatext.getText(),
+            //Tempatfield.getText(),
+            //tgl,
+            //gender,
+            //AgamaComboBox.getSelectedItem().toString(),
+            //Telptext.getText(),
+            //Alamattext.getText()
+      // ); 
        OrtuFrame OF = new OrtuFrame();
        OF.setBio(this.bio);
        OF.setVisible(true);
