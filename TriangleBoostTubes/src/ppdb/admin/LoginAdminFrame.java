@@ -6,9 +6,12 @@
 package ppdb.admin;
 
 import ppdb.siswa.BiodataFrame;
+import Sekolah.*;
+import ppdb.koneksi.Koneksi;
+
 import javax.swing.JOptionPane;
 import java.sql.*;
-import ppdb.koneksi.Koneksi;
+
 
 
 public class LoginAdminFrame extends javax.swing.JFrame {
@@ -39,6 +42,7 @@ public class LoginAdminFrame extends javax.swing.JFrame {
         userText = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btnHome = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
@@ -70,16 +74,18 @@ public class LoginAdminFrame extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin.png"))); // NOI18N
 
+        btnHome.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        btnHome.setText("HOME");
+        btnHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHomeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(88, 88, 88)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -89,8 +95,17 @@ public class LoginAdminFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(passText, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
                     .addComponent(userText)
-                    .addComponent(loginButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnHome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(98, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,7 +123,9 @@ public class LoginAdminFrame extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(passText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(loginButton)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(loginButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnHome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(78, Short.MAX_VALUE))
         );
 
@@ -136,7 +153,7 @@ public class LoginAdminFrame extends javax.swing.JFrame {
     
     
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-//        if (userText.getText().equals("admin")) { // cek apakah user == admin
+//  if (userText.getText().equals("admin")) { // cek apakah user == admin
 //            if (passText.getText().equals("admin")) { // cek apakah user admin berpassword admin
 //                JOptionPane.showMessageDialog(this, "LOGIN BERHASIL");
 //                //this.dispose(); // Auto Close Form
@@ -167,17 +184,19 @@ public class LoginAdminFrame extends javax.swing.JFrame {
                 IndexAdmin IA = new IndexAdmin();
                 IA.setVisible(true);
                 this.dispose();
-                
             }else{
                 JOptionPane.showMessageDialog(this, "Data Tidak ada");
-                
             }
-            
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, e);
-        }
-            
+        }   
     }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
+        indexFrame IF = new indexFrame();
+        IF.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnHomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -222,6 +241,7 @@ public class LoginAdminFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnHome;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
