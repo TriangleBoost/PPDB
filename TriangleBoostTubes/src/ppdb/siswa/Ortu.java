@@ -10,15 +10,15 @@ package ppdb.siswa;
  * @author Dhandy
  */
 public class Ortu {
-    String namaAyah, pekerjaan, gaji, telp, alamat;
+    String namaAyah, pekerjaanAyah, gajiAyah, telpAyah, alamatAyah;
     String namaIbu, pekerjaanIbu, gajiIbu, telpIbu, alamatIbu;
 
-    public Ortu(String namaAyah, String pekerjaan, String gaji, String telp, String alamat, String namaIbu, String pekerjaanIbu, String gajiIbu, String telpIbu, String alamatIbu) {
+    public Ortu(String namaAyah, String pekerjaanAyah, String gajiAyah, String telpAyah, String alamatAyah, String namaIbu, String pekerjaanIbu, String gajiIbu, String telpIbu, String alamatIbu) {
         this.namaAyah = namaAyah;
-        this.pekerjaan = pekerjaan;
-        this.gaji = gaji;
-        this.telp = telp;
-        this.alamat = alamat;
+        this.pekerjaanAyah = pekerjaanAyah;
+        this.gajiAyah = gajiAyah;
+        this.telpAyah = telpAyah;
+        this.alamatAyah = alamatAyah;
         this.namaIbu = namaIbu;
         this.pekerjaanIbu = pekerjaanIbu;
         this.gajiIbu = gajiIbu;
@@ -30,41 +30,83 @@ public class Ortu {
         return namaAyah;
     }
 
-    public String getPekerjaan() {
-        return pekerjaan;
+    public void setNamaAyah(String namaAyah) {
+        this.namaAyah = namaAyah;
     }
 
-    public String getGaji() {
-        return gaji;
+    public String getPekerjaanAyah() {
+        return pekerjaanAyah;
     }
 
-    public String getTelp() {
-        return telp;
+    public void setPekerjaanAyah(String pekerjaanAyah) {
+        this.pekerjaanAyah = pekerjaanAyah;
     }
 
-    public String getAlamat() {
-        return alamat;
+    public String getGajiAyah() {
+        return gajiAyah;
+    }
+
+    public void setGajiAyah(String gajiAyah) {
+        this.gajiAyah = gajiAyah;
+    }
+
+    public String getTelpAyah() {
+        return telpAyah;
+    }
+
+    public void setTelpAyah(String telpAyah) {
+        this.telpAyah = telpAyah;
+    }
+
+    public String getAlamatAyah() {
+        return alamatAyah;
+    }
+
+    public void setAlamatAyah(String alamatAyah) {
+        this.alamatAyah = alamatAyah;
     }
 
     public String getNamaIbu() {
         return namaIbu;
     }
 
+    public void setNamaIbu(String namaIbu) {
+        this.namaIbu = namaIbu;
+    }
+
     public String getPekerjaanIbu() {
         return pekerjaanIbu;
+    }
+
+    public void setPekerjaanIbu(String pekerjaanIbu) {
+        this.pekerjaanIbu = pekerjaanIbu;
     }
 
     public String getGajiIbu() {
         return gajiIbu;
     }
 
+    public void setGajiIbu(String gajiIbu) {
+        this.gajiIbu = gajiIbu;
+    }
+
     public String getTelpIbu() {
         return telpIbu;
+    }
+
+    public void setTelpIbu(String telpIbu) {
+        this.telpIbu = telpIbu;
     }
 
     public String getAlamatIbu() {
         return alamatIbu;
     }
+
+    public void setAlamatIbu(String alamatIbu) {
+        this.alamatIbu = alamatIbu;
+    }
+
+    
     
     
 }
