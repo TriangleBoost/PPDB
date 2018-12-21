@@ -226,13 +226,15 @@ public class NilaiFrame extends javax.swing.JFrame {
         OF.setOrtu(this.ortu);
         OF.setNilai(this.nilai);
         OF.setOutput(this.output);
-        OF.setVisible(true);
         
         siswaDao dao = new siswaDao() ;
         nilaiDao nd = new nilaiDao() ;
         ortuDao od = new ortuDao() ;
         if(dao.insert(bio) && nd.insert(nilai) && od.insert(ortu)) {
             JOptionPane.showMessageDialog(this, "Data Berhasil Ditambahkan.", "INFO", JOptionPane.INFORMATION_MESSAGE);
+            IndexSiswaFrame ISF = new IndexSiswaFrame () ;
+            ISF.setVisible(true) ;
+            this.dispose() ;
         } else {
             JOptionPane.showMessageDialog(this, "Data Gagal Ditambahkan.", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
